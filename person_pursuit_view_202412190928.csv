@@ -1,0 +1,11 @@
+"pk_person","name","sex","death_date","person_definition","person_label","person_notes","person_import_metadata","original_uri","fk_appellation","pk_pursuit","pursuit_label","begin_date","end_date","pursuit_definition","pursuit_notes","pursuit_import_metadata","fk_occupation","fk_geo_place"
+1,Acaba Joseph,M,,,,,,,,6,Joseph Michael Acaba a effecuté l'installation de panneaux solaires sur l'ISS,"2009-03-15","2009-03-28",,,,,
+2,Acton Loren,M,,,,"",,,,7,Expériences en physique solaire,"1985-07-29","1985-08-06",,,,,
+3,Adamson James Craig,M,,,,,,,,8,Gestion de systèmes de navigation,"1989-08-08","1989-08-13",,,,,
+4,Afanassiev Viktor,M,,,,,,,,9,Commande de la station Mir,"1990-12-02","1991-05-26",,,,,
+5,Aimbetov Aïdyn,M,,,,,,,,10,Expériences biologiques,"2015-09-02","2015-09-11",,,,,
+6,Thomas Pesquet,M,"",,,,,,,15,Séjour de longue durée à bord de l'ISS,"2016-11-17","2017-06-02",,,,,
+7,Neil Armstrong,M,"2012-08-25",,,,,,,11,Premier homme à marcher sur la Lune,"1969-07-20",,,,,,
+8,Valentina Terechkova,F,,,,,,,,12,Première femme dans l'espace,"1963-06-16","1963-06-19",,,,,
+9,Chris Hadfield,M,,,,,,,,13,Commandant de l'ISS,"2013-03-13 ","2013-05-13",,,,,
+10,Peggy Whitson,F,,,,,,,,14,Première femme commandant de l'ISS,"2007-10-10","2008-04-19",,,,,
