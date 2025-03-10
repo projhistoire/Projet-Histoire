@@ -1,0 +1,68 @@
+[
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## Explore Wikidata\n\nIn this notebook, we refine and document the main requests available on the page [Exploration of Wikidata](../documentation/wikidata/Wikidata-exploration.md) \n\n\nWhen you prepare the queries, you can execute them on the Wikidata SPARQL endpoint, and then document and execute them in this notebook.",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "### Explore occupations and fields of work",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### List 50 more frequent occupations\n\nPREFIX wd: <http://www.wikidata.org/entity/> \n\nSELECT ?occupation ?occupationLabel ?n\nWHERE {\n    {\n        SELECT ?occupation (COUNT(*) as ?n)\n        WHERE {\n            ?astronaut wdt:P106 wd:Q11631.  # Filtrer uniquement les astronautes\n            ?astronaut wdt:P106 ?occupation. # Obtenir leurs autres occupations\n        }\n        GROUP BY ?occupation\n        ORDER BY DESC(?n)\n        LIMIT 20  # Limite à 20 résultats\n    }\n\n    SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\" }\n}\nORDER BY DESC(?n)\n\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### List more frequent occupations\n\nPREFIX wd: <http://www.wikidata.org/entity/> \n\nSELECT ?field ?fieldLabel ?n\nWHERE {\n    {\n        SELECT ?field (COUNT(*) as ?n)\n        WHERE {\n            ?astronaut wdt:P106 wd:Q11631.  # Sélectionne uniquement les astronautes\n            ?astronaut wdt:P101 ?field.     # Récupère leurs domaines d'expertise\n        }\n        GROUP BY ?field\n        ORDER BY DESC(?n)\n        LIMIT 20  # Limite à 20 résultats\n    }\n\n    SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\" }\n}\nORDER BY DESC(?n)\n\n",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "### Inspect astronauts and related occupations",
+    "metadata": {
+      "metadata": {
+        "tags": [
+          "parameters"
+        ]
+      }
+    }
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "## Count and inspect occupations and fields of work for astronauts\nSELECT (COUNT(*) as ?eff)\nWHERE {\n    ?item wdt:P31 wd:Q5;  # Sélectionne uniquement les humains\n          wdt:P106 wd:Q11631.  # Filtre les astronautes (Q11631)\n\n\t#wdt:P101 wd:Q22719 #astronautics\n\t#wdt:P101 wd:Q765633 #aviation\n\t#wdt:P101 wd:Q5916 #spaceflight\n\t#\twdt:P101 wd:Q37547 #astrophysics  \n   \t#\twdt:P101 wd:Q333  # Astronomie\n    \t#\twdt:P106 wd:Q169470 # Physicien\n  \t#\twdt:P101 wd:Q413 # Physique\n    \t#\twdt:P106 wd:Q170790  # Mathématicien\n    \t#\twdt:P106 wd:Q901 # Scientifique\n}  \n#LIMIT 10\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Tous les astronautes depuis 1900\nSELECT (COUNT(*) as ?number)\nWHERE {\n    {\n        ?item wdt:P106 wd:Q11631.  # Astronaute\n    }\n    UNION\n    {\n        ?item wdt:P101 wd:Q22719.  # Astronautics\n    }\n\n    ?item wdt:P31 wd:Q5;  # Sélectionne uniquement les humains\n          wdt:P569 ?birthDate.  # Date de naissance\n\n    BIND(REPLACE(str(?birthDate), \"(.*)([0-9]{4})(.*)\", \"$2\") AS ?year)\n    FILTER(xsd:integer(?year) >= 1900)  # Filtre pour les astronautes nés après 1900\n}",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Les astronautes du 20ème siècle\n\nSELECT (count(*) as ?number)\nWHERE {\n    {?item wdt:P106 wd:Q11631}  # Astronaute\n    UNION\n    {?item wdt:P101 wd:Q22719}  # Astronautique\n    UNION\n    {?item wdt:P106 wd:Q765633}  # Aviation\n    UNION\n    {?item wdt:P106 wd:Q169470}  # physicist\n    UNION\n    {?item wdt:P101 wd:Q413}     # physics  \n    \n    ?item wdt:P31 wd:Q5;  # Sélectionne uniquement les humains\n          wdt:P569 ?birthDate.  # Date de naissance\n\n    BIND(REPLACE(str(?birthDate), \"(.*)([0-9]{4})(.*)\", \"$2\") AS ?year)\n    FILTER(xsd:integer(?year) > 1900  && xsd:integer(?year) < 2001 )\n}\n",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "### Count how many properties are available for the considered population\n\nExecute this query on the Wikidata sparql-endpoint and save the result to a CSV document that you will store in your project: [population properties list](../Wikidata/properties_20250306.csv)\n\n\nOpen your CSV file with a spreadsheet editor:\n* Inspect the content of the results and look for relevant properties with regard to your research questions\n* Observe all the links to other semantic web repositories, probably the sources of this information.\n* You can transform this file to your preferred spreadsheet editor format (Calc, Excel, etc.) and take notes row per row in the spreadsheet.\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "PREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nSELECT ?p ?propLabel ?eff\nWHERE {\n{\nSELECT ?p  (count(*) as ?eff)\nWHERE {\n   {?item wdt:P106 wd:Q11631}  # Astronaute\n    UNION\n    {?item wdt:P101 wd:Q22719}  # Astronautics\n    UNION\n    {?item wdt:P106 wd:Q765633}  # Aviation\n\n    ?item wdt:P31 wd:Q5; # Any instance of a human.\n            wdt:P569 ?birthDate.\n    ?item  ?p ?o.\n\n    BIND(REPLACE(str(?birthDate), \"(.*)([0-9]{4})(.*)\", \"$2\") AS ?year)\n    ### Experiment with different time filters if too many values\n    FILTER(xsd:integer(?year) > 1900  && xsd:integer(?year) < 2025)\n    # FILTER(xsd:integer(?year) > 1850  && xsd:integer(?year) < 1951)\n\n}\nGROUP BY ?p \n\n\n    }\n\n# get the original property (in the the statement construct)     \n?prop wikibase:directClaim ?p .\n\nSERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n\n}  \nORDER BY DESC(?eff)",
+    "metadata": {}
+  }
+]
