@@ -1,0 +1,3668 @@
+prefix bd: <http://www.bigdata.com/rdf#>
+prefix dc: <http://purl.org/dc/elements/1.1/>
+prefix dcterms: <http://purl.org/dc/terms/>
+prefix err: <http://www.w3.org/2005/xqt-errors#>
+prefix fn: <http://www.w3.org/2005/xpath-functions#>
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+prefix fti: <http://franz.com/ns/allegrograph/2.2/textindex/>
+prefix keyword: <http://franz.com/ns/keyword#>
+prefix kw: <http://franz.com/ns/keyword#>
+prefix nd: <http://franz.com/ns/allegrograph/5.0/geo/nd#>
+prefix ndfn: <http://franz.com/ns/allegrograph/5.0/geo/nd/fn#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix wd: <http://www.wikidata.org/entity/>
+prefix wdt: <http://www.wikidata.org/prop/direct/>
+prefix wikibase: <http://wikiba.se/ontology#>
+prefix xs: <http://www.w3.org/2001/XMLSchema#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+wd:Q376688 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1957" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Yury Usachov" . 
+wd:Q440251 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1959" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Michael Barratt" . 
+wd:Q426836 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1948" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Dale Gardner" . 
+wd:Q447311 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1948" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Anatoly Yakovlevich Solovyev" . 
+wd:Q364451 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1921" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Georgy Beregovoy" . 
+wd:Q433608 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1937" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Bruce McCandless II" . 
+wd:Q446243 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1945" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Millie Hughes-Fulford" . 
+wd:Q375641 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1968" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Akihiko Hoshide" . 
+wd:Q454649 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1958" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "André Kuipers" . 
+wd:Q434232 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1957" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Michael E. Fossum" . 
+wd:Q391517 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1935" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Robert Henry Lawrence" . 
+wd:Q440303 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1963" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Timothy Kopra" . 
+wd:Q379946 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1956" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Sultan bin Salman Al Saud" . 
+wd:Q449577 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1941" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Vladimir Lyakhov" . 
+wd:Q361415 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1941" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Mirosław Hermaszewski" . 
+wd:Q447057 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1961" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Christopher Ferguson" . 
+wd:Q431006 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1940" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Viktor Savinykh" . 
+wd:Q434409 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1935" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Georgy Shonin" . 
+wd:Q460161 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1933" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Henry Hartsfield" . 
+wd:Q382150 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1951" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Leonid Kadeniuk" . 
+wd:Q430996 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1951" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Muhammed Faris" . 
+wd:Q360038 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1939" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Valeri Rozhdestvenski" . 
+wd:Q375065 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1933" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Stuart Roosa" . 
+wd:Q363506 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1935" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Rusty Schweickart" . 
+wd:Q362220 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1961" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Alan G. Poindexter" . 
+wd:Q456840 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1940" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Georgi Ivanov" . 
+wd:Q447334 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1962" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "George D. Zamka" . 
+wd:Q386148 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1956" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Curtis Brown" . 
+wd:Q378949 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1958" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Steven Smith" . 
+wd:Q361932 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1949" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "William Shepherd" . 
+wd:Q375659 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1964" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Oleg Kononenko" . 
+wd:Q447304 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1962" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Rex J. Walheim" . 
+wd:Q448563 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1951" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "John L. Phillips" . 
+wd:Q362819 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1944" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Aleksandr Serebrov" . 
+wd:Q433337 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1952" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Linda M. Godwin" . 
+wd:Q362902 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1942" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Arnaldo Tamayo Méndez" . 
+wd:Q382247 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1959" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Scott Altman" . 
+wd:Q382184 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1937" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Vitaly Zholobov" . 
+wd:Q451259 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1930" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Yury Artyukhin" . 
+wd:Q450834 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1926" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Lev Dyomin" . 
+wd:Q374034 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1932" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Joe Engle" . 
+wd:Q379039 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1977" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Samantha Cristoforetti" . 
+wd:Q443994 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1937" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Joseph P. Allen" . 
+wd:Q365317 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1928" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Vasily Lazarev" . 
+wd:Q448167 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1964" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Ivan Bella" . 
+wd:Q375631 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1961" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Daniel M. Tani" . 
+wd:Q382202 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1958" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Jeffrey Williams" . 
+wd:Q440178 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1942" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Vyacheslav Zudov" . 
+wd:Q448520 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1964" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Roberto Vittori" . 
+wd:Q363250 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1955" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Donald Pettit" . 
+wd:Q441017 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1961" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Ronald J. Garan" . 
+wd:Q372215 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1932" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Walter Cunningham" . 
+wd:Q434555 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1931" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Georgy Grechko" . 
+wd:Q444299 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1951" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Aleksandr Panayotov Aleksandrov" . 
+wd:Q440266 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1967" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Dominic A. Antonelli" . 
+wd:Q446917 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1932" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Joseph P. Kerwin" . 
+wd:Q446531 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1940" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Aleksandr Ivanchenkov" . 
+wd:Q376165 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1939" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "William B. Lenoir" . 
+wd:Q453764 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1956" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Sergey Avdeyev" . 
+wd:Q378952 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1949" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Kenneth D. Cameron" . 
+wd:Q448491 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1962" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Club De Voleibol Las Mesas" . 
+wd:Q358525 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1933" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Viktor Patsayev" . 
+wd:Q448470 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1960" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Steven Lindsey" . 
+wd:Q381541 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1934" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Aleksei Yeliseyev" . 
+wd:Q448243 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1960" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Lee Archambault" . 
+wd:Q446720 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1944" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Yury Romanenko" . 
+wd:Q390344 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1936" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Edward G. Gibson" . 
+wd:Q438844 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1945" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Gregory Olsen" . 
+wd:Q383515 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1948" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Jerry L. Ross" . 
+wd:Q362180 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1960" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Mikhail Tyurin" . 
+wd:Q442233 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1937" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Richard H. Truly" . 
+wd:Q434546 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1942" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Pyotr Klimuk" . 
+wd:Q434205 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1938" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Jean-Loup Chrétien" . 
+wd:Q446692 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1952" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Dumitru Prunariu" . 
+wd:Q446233 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1948" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Aleksandr Aleksandrovich Volkov" . 
+wd:Q360433 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1950" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Franklin Chang-Díaz" . 
+wd:Q433046 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1945" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Leonid Popov" . 
+wd:Q382176 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1961" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Daniel C. Burbank" . 
+wd:Q448538 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1934" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Boris Volynov" . 
+wd:Q457064 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1971" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Roman Romanenko" . 
+wd:Q455669 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1933" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Evgeniy Vasilievich Khrunov" . 
+wd:Q362998 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1958" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Gennady Padalka" . 
+wd:Q360060 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1941" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Leonid Kizim" . 
+wd:Q358931 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1968" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Garrett Reisman" . 
+wd:Q448872 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1952" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Valeri Tokarev" . 
+wd:Q375566 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1963" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Koichi Wakata" . 
+wd:Q448320 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1970" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "David Saint-Jacques" . 
+wd:Q364476 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1929" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "James McDivitt" . 
+wd:Q448547 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1963" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Pedro Duque" . 
+wd:Q382013 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1944" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Gregory Jarvis" . 
+wd:Q362261 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1967" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Michael Fincke" . 
+wd:Q362190 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1964" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Scott Kelly" . 
+wd:Q432752 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1935" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Valeri Kubasov" . 
+wd:Q449706 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1930" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Donn F. Eisele" . 
+wd:Q375202 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1958" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Michael López-Alegría" . 
+wd:Q363976 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1936" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Jack R. Lousma" . 
+wd:Q362209 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1958" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "John M. Grunsfeld" . 
+wd:Q447264 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1959" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Clayton Anderson" . 
+wd:Q63594 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1949" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Bùi Thanh Liêm" . 
+wd:Q159681 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1934" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Valery Bykovsky" . 
+wd:Q152298 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1935" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Gherman Titov" . 
+wd:Q203026 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1962" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Sergei Zalyotin" . 
+wd:Q81129 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1947" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Jügderdemidiin Gürragchaa" . 
+wd:Q41597 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1964" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Joan Higginbotham" . 
+wd:Q17519 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1966" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Anousheh Ansari" . 
+wd:Q25011 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1946" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Charles Bolden" . 
+wd:Q111240 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1928" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Jim Lovell" . 
+wd:Q45137 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1952" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Lee Morin" . 
+wd:Q213076 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1930" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Pete Conrad" . 
+wd:Q24094 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1964" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Paul W. Richards" . 
+wd:Q29527 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1953" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Jan Davis" . 
+wd:Q52923 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1956" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Janice E. Voss" . 
+wd:Q63610 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1965" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Robert Satcher" . 
+wd:Q29648 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1957" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Patrick Forrester" . 
+wd:Q25981 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1945" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Michael J. Smith" . 
+wd:Q49264 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1963" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Lisa Nowak" . 
+wd:Q110879 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1926" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Gus Grissom" . 
+wd:Q152318 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1948" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Svetlana Savitskaya" . 
+wd:Q44371 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1937" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Valentina Tereshkova" . 
+wd:Q108886 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1935" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Harrison Schmitt" . 
+wd:Q107667 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1930" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "John Young" . 
+wd:Q1615 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1930" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Neil Armstrong" . 
+wd:Q45139 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1956" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Paul Lockhart" . 
+wd:Q49285 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1951" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Sally Ride" . 
+wd:Q41606 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1959" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Kathryn P. Hire" . 
+wd:Q52495 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1961" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Frank De Winne" . 
+wd:Q16297 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1931" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "William Shatner" . 
+wd:Q55177 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1965" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Sunita Williams" . 
+wd:Q215002 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1945" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Ernst Messerschmid" . 
+wd:Q201797 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1946" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "F. Drew Gaffney" . 
+wd:Q49284 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1949" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Judith Resnik" . 
+wd:Q51773 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1963" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Heidemarie Stefanyshyn-Piper" . 
+wd:Q57229 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1937" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Sigmund Jähn" . 
+wd:Q12865 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1949" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Bertalan Farkas" . 
+wd:Q41432 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1942" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Robert L. Stewart" . 
+wd:Q197135 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1966" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Zhai Zhigang" . 
+wd:Q185560 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1946" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "William Frederick Fisher" . 
+wd:Q166616 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1958" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Thomas Reiter" . 
+wd:Q104865 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1927" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Vladimir Komarov" . 
+wd:Q32295 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1962" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Michael J. Massimino" . 
+wd:Q210382 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1978" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Yi So-Yeon" . 
+wd:Q49064 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1964" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Sandra Magnus" . 
+wd:Q7327 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1934" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Yuri Gagarin" . 
+wd:Q29515 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1958" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Nancy J. Currie" . 
+wd:Q77349 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1959" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Abdul Ahad Mohmand" . 
+wd:Q21767 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1969" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Tracy Caldwell Dyson" . 
+wd:Q24083 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1964" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "James M. Kelly" . 
+wd:Q182642 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1921" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "John Glenn" . 
+wd:Q180499 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1937" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Karol J. Bobko" . 
+wd:Q29650 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1961" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Charles O. Hobaugh" . 
+wd:Q19242 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1933" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Bill Anders" . 
+wd:Q158486 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1934" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Eugene Cernan" . 
+wd:Q157931 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1925" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Pavel Ivanovich Belyayev" . 
+wd:Q143103 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1943" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Norman Thagard" . 
+wd:Q29618 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1949" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Bonnie J. Dunbar" . 
+wd:Q21842 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1947" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Mary L. Cleave" . 
+wd:Q78552 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1960" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Franz Viehböck" . 
+wd:Q154269 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1934" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Alexey Leonov" . 
+wd:Q118490 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1930" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Pavel Popovich" . 
+wd:Q7468 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1960" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Catherine Coleman" . 
+wd:Q74018 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1968" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "James Dutton" . 
+wd:Q48998 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1961" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Susan Kilrain" . 
+wd:Q74015 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1975" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Dorothy M. Metcalf-Lindenburger" . 
+wd:Q45080 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1952" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Charles Camarda" . 
+wd:Q45082 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1958" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "John Herrington" . 
+wd:Q116962 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1944" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Claude Nicollier" . 
+wd:Q52494 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1941" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Dirk Frimout" . 
+wd:Q71248 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1976" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Alexander Gerst" . 
+wd:Q49035 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1959" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Wendy B. Lawrence" . 
+wd:Q120793 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1966" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Douglas G. Hurley" . 
+wd:Q213605 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1951" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Hans Schlegel" . 
+wd:Q32266 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1957" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Duane G. Carey" . 
+wd:Q112284 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1935" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Charles Duke" . 
+wd:Q2252 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1930" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Buzz Aldrin" . 
+wd:Q32305 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1964" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Stephen Frick" . 
+wd:Q210184 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1940" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Dennis Tito" . 
+wd:Q49269 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1958" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Ellen Ochoa" . 
+wd:Q17177 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1957" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Paolo Nespoli" . 
+wd:Q214974 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1952" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Klaus-Dietrich Flade" . 
+wd:Q147581 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1965" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Yang Liwei" . 
+wd:Q70853 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1939" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Eberhard Köllner" . 
+wd:Q41632 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1951" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Marsha Ivins" . 
+wd:Q55178 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1966" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Stephanie Wilson" . 
+wd:Q104859 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1930" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Michael Collins" . 
+wd:Q52046 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1970" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Christopher Cassidy" . 
+wd:Q110450 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1923" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Wally Schirra" . 
+wd:Q34091 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1956" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Mae Jemison" . 
+wd:Q18762 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1928" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Frank Borman" . 
+wd:Q41575 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1958" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Susan J. Helms" . 
+wd:Q202933 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1944" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Rimantas Stankevičius" . 
+wd:Q174979 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1923" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Alan Shepard" . 
+wd:Q285944 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1942" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Toyohiro Akiyama" . 
+wd:Q317382 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1957" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Christer Fuglesang" . 
+wd:Q229674 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1948" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Christa McAuliffe" . 
+wd:Q318542 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1959" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Michael P. Anderson" . 
+wd:Q237879 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1962" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Kalpana Chawla" . 
+wd:Q283544 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1973" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Sergey Volkov" . 
+wd:Q232441 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1961" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Laurel Clark" . 
+wd:Q235266 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1978" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Liu Yang" . 
+wd:Q260329 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1950" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Joseph R. Tanner" . 
+wd:Q317643 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1963" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Marcos Pontes" . 
+wd:Q342953 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1961" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Yuri Malenchenko" . 
+wd:Q240701 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1971" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Megan McArthur" . 
+wd:Q347977 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1959" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Fyodor Yurchikhin" . 
+wd:Q278656 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1932" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "David Scott" . 
+wd:Q310924 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1932" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Alan Bean" . 
+wd:Q215140 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1956" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Reinhold Ewald" . 
+wd:Q254985 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1948" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Vladimír Remek" . 
+wd:Q317792 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1942" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Valeri Polyakov" . 
+wd:Q232692 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1970" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Naoko Yamazaki" . 
+wd:Q289337 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1952" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Kathryn C. Thornton" . 
+wd:Q348358 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1931" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Jack Swigert" . 
+wd:Q320068 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1926" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Konstantin Feoktistov" . 
+wd:Q357450 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1965" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Soichi Noguchi" . 
+wd:Q345658 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1935" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Vladislav Volkov" . 
+wd:Q355433 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1928" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Georgy Dobrovolsky" . 
+wd:Q239960 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1961" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Pamela Melroy" . 
+wd:Q215124 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1941" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Ulf Merbold" . 
+wd:Q268912 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1962" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Mary Ellen Weber" . 
+wd:Q254058 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1946" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Patrick Baudry" . 
+wd:Q325205 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1949" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Rakesh Sharma" . 
+wd:Q336810 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1924" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Deke Slayton" . 
+wd:Q260217 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1964" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Kenneth Ham" . 
+wd:Q315730 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1950" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Ronald McNair" . 
+wd:Q235523 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1960" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Peggy Whitson" . 
+wd:Q313543 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1933" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Ronald Evans" . 
+wd:Q237473 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1963" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Helen Sharman" . 
+wd:Q252726 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1935" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Vitaly Sevastyanov" . 
+wd:Q345288 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1956" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Aleksandr Kaleri" . 
+wd:Q352069 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1957" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Léopold Eyharts" . 
+wd:Q240708 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1965" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Shannon Walker" . 
+wd:Q312833 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1927" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Gordon Cooper" . 
+wd:Q265261 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1959" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Janet L. Kavandi" . 
+wd:Q313399 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1927" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Vladimir Shatalov" . 
+wd:Q335503 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1925" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Scott Carpenter" . 
+wd:Q324774 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1957" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "William G. Gregory" . 
+wd:Q261731 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1974" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Yevgeny Tarelkin" . 
+wd:Q254785 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1913" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Robert R. Gilruth" . 
+wd:Q350317 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1956" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "David M. Brown" . 
+wd:Q262359 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1959" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Tamara E. Jernigan" . 
+wd:Q280301 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1937" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Igor Volk" . 
+wd:Q319269 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1961" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Richard Garriott" . 
+wd:Q352137 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1937" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Boris Borisovich Yegorov" . 
+wd:Q313957 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1972" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Sheikh Muszaphar Shukor" . 
+wd:Q258385 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1945" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Roberta Bondar" . 
+wd:Q314921 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1942" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Vladimir Kovalyonok" . 
+wd:Q318513 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1936" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Ken Mattingly" . 
+wd:Q353687 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1947" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Pham Tuan" . 
+wd:Q264460 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1953" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Ellen S. Baker" . 
+wd:Q358437 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1942" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Bill Nelson" . 
+wd:Q281604 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1950" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Boris Morukov" . 
+wd:Q240769 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1963" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Julie Payette" . 
+wd:Q216726 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1930" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Ed White" . 
+wd:Q235047 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1951" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Barbara Morgan" . 
+wd:Q344892 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1965" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Fei Junlong" . 
+wd:Q315737 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1937" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Robert Crippen" . 
+wd:Q255764 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1957" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Yelena Kondakova" . 
+wd:Q281819 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1955" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Pierre J. Thuot" . 
+wd:Q349365 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1946" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Ellison Onizuka" . 
+wd:Q295873 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1930" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Edgar Mitchell" . 
+wd:Q345678 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1935" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Roger Bruce Chaffee" . 
+wd:Q240776 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1969" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Karen L. Nyberg" . 
+wd:Q237470 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1949" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Anna Lee Fisher" . 
+wd:Q313815 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1958" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Sergei Krikalev" . 
+wd:Q342338 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1965" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Oleg Kotov" . 
+wd:Q348205 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1934" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Viktor Gorbatko" . 
+wd:Q320047 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1939" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Dick Scobee" . 
+wd:Q254298 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1947" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Margaret Rhea Seddon" . 
+wd:Q233795 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1943" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Shannon Lucid" . 
+wd:Q334463 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1961" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "William C. McCool" . 
+wd:Q318965 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1933" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Fred Haise" . 
+wd:Q229635 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1956" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Eileen Collins" . 
+wd:Q219569 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1954" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Ilan Ramon" . 
+wd:Q235567 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1962" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Nicole Stott" . 
+wd:Q312474 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1929" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Andriyan Nikolayev" . 
+wd:Q221615 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1947" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Aleksandr Viktorenko" . 
+wd:Q234306 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1952" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Chiaki Mukai" . 
+wd:Q316417 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1930" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Thomas P. Stafford" . 
+wd:Q215009 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1953" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Gerhard Thiele" . 
+wd:Q318934 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1967" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Joseph M. Acaba" . 
+wd:Q266359 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1932" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Nikolay Rukavishnikov" . 
+wd:Q357510 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1964" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Mark Kelly" . 
+wd:Q235580 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1957" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Claudie Haigneré" . 
+wd:Q297801 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1930" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "James Irwin" . 
+wd:Q215131 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1940" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Reinhard Furrer" . 
+wd:Q215142 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1954" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Ulrich Walter" . 
+wd:Q346671 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1957" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Rick Husband" . 
+wd:Q227030 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1973" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Mark Shuttleworth" . 
+wd:Q51754625 wdt:P31 wd:Q5 ; 
+  wdt:P569 "2000" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Alan Kin-Tak Lau" . 
+wd:Q21088066 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1919" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Anatoly Abramov" . 
+wd:Q518012 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1972" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Timothy Peake" . 
+wd:Q24636844 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1952" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "James R. Hansen" . 
+wd:Q12044017 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1976" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Q12044017" . 
+wd:Q69110 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1913" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Ernst Stuhlinger" . 
+wd:Q4059480 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1929" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Efraim Akim" . 
+wd:Q963226 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1971" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Oleg Novitskiy" . 
+wd:Q507046 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1930" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Owen K. Garriott" . 
+wd:Q45305 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1910" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Barys Kit" . 
+wd:Q2738124 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1922" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Peter Kolosimo" . 
+wd:Q4538966 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1932" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Vasily Yaroshevsky" . 
+wd:Q464166 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1951" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Kathryn D. Sullivan" . 
+wd:Q7308897 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1915" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Reginald Turnill" . 
+wd:Q435892 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1911" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Luigi Broglio" . 
+wd:Q4901639 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1910" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Robert Thomas Jones" . 
+wd:Q4081864 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1930" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Vladimir Beletsky" . 
+wd:Q2501394 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1905" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Ary Abramovich Sternfeld" . 
+wd:Q7421764 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1971" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Sara Seager" . 
+wd:Q28540326 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1970" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Matthias Maurer" . 
+wd:Q4260274 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1926" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Yuri Letunov" . 
+wd:Q916950 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1943" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Oldřich Pelčák" . 
+wd:Q4798535 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1925" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Arthur E. Bryson" . 
+wd:Q28125689 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1928" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Nikolay Agadzhanyan" . 
+wd:Q15117265 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1904" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "István György Nagy" . 
+wd:Q57076764 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1959" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Sergio Pellegrino" . 
+wd:Q470193 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1912" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Boris Chertok" . 
+wd:Q3436505 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1926" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Robert W. Smith" . 
+wd:Q57420529 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1942" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Petr Lála" . 
+wd:Q472497 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1939" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Valery Ryumin" . 
+wd:Q45090045 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1927" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Boris Valníček" . 
+wd:Q85877536 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1957" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Zhou Jianping" . 
+wd:Q17426771 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1926" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Gleb Maksimov" . 
+wd:Q10278270 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1921" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Eurico da Fonseca" . 
+wd:Q7597347 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1938" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Stamatios Krimigis" . 
+wd:Q7513118 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1971" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Sigrid Close" . 
+wd:Q649154 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1914" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Georgy Babakin" . 
+wd:Q4449185 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1912" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Gleb Tabakov" . 
+wd:Q4340519 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1921" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Dmitry Okhotsimsky" . 
+wd:Q6465717 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1922" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Q6465717" . 
+wd:Q62027510 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1954" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Haym Benaroya" . 
+wd:Q4056532 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1923" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Pavel Agadzhanov" . 
+wd:Q12037178 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1925" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Milan Codr" . 
+wd:Q36245 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1938" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Roger Boisjoly" . 
+wd:Q12044276 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1948" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Pavel Toufar" . 
+wd:Q4514359 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1906" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "N. G. Chernyshev" . 
+wd:Q12839609 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1952" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Fuad Hacızadə" . 
+wd:Q4531891 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1924" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Timur Eneev" . 
+wd:Q3376307 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1920" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Felix Ziegel" . 
+wd:Q15072240 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1941" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Yefim Mezhiritsky" . 
+wd:Q4934240 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1935" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Bob Twiggs" . 
+wd:Q5512474 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1948" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "G. Scott Hubbard" . 
+wd:Q554415 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1967" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Terry W. Virts" . 
+wd:Q23015584 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1987" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Dušan Majer" . 
+wd:Q60838116 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1907" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Evgeny Shchetinkov" . 
+wd:Q465748 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1931" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Aleksei Gubarev" . 
+wd:Q3376613 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1923" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Peter Glaser" . 
+wd:Q12028447 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1936" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Karel Pacner" . 
+wd:Q21110393 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1954" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Sergey Nikulin" . 
+wd:Q466069 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1947" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Vladimir Titov" . 
+wd:Q520384 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1960" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Thomas Marshburn" . 
+wd:Q491064 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1945" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Ronald J. Grabe" . 
+wd:Q539385 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1932" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Alfred Worden" . 
+wd:Q535831 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1962" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Vladimir Dezhurov" . 
+wd:Q540108 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1949" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Bruce E. Melnick" . 
+wd:Q471380 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1954" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Dafydd Williams" . 
+wd:Q497530 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1945" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Brewster H. Shaw" . 
+wd:Q498775 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1946" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Robert L. Gibson" . 
+wd:Q540379 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1957" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Michael Foale" . 
+wd:Q557058 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1933" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Donald H. Peterson" . 
+wd:Q461821 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1964" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Eric Boe" . 
+wd:Q461887 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1954" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Takao Doi" . 
+wd:Q502101 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1964" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Andrey Borisenko" . 
+wd:Q535172 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1946" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Vladimir Solovyov" . 
+wd:Q562168 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1950" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Eugene H. Trinh" . 
+wd:Q519256 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1932" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Jake Garn" . 
+wd:Q520618 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1957" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Richard M. Linnehan" . 
+wd:Q466483 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1943" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Aleksandr Pavlovich Aleksandrov" . 
+wd:Q463833 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1931" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Vance D. Brand" . 
+wd:Q557066 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1941" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Frederick D. Gregory" . 
+wd:Q495624 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1935" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "John L. Finley" . 
+wd:Q512266 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1978" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Thomas Pesquet" . 
+wd:Q528943 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1942" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Guion Bluford" . 
+wd:Q535157 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1942" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Valentin Lebedev" . 
+wd:Q461860 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1960" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Douglas H. Wheelock" . 
+wd:Q465461 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1939" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Yury Glazkov" . 
+wd:Q505439 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1955" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Piers Sellers" . 
+wd:Q466075 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1953" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Pavel Vinogradov" . 
+wd:Q462853 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1963" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Richard R. Arnold" . 
+wd:Q539358 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1965" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Yury Lonchakov" . 
+wd:Q494209 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1976" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Ko San" . 
+wd:Q507894 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1951" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Andy Thomas" . 
+wd:Q487984 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1956" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Anatoly Artsebarsky" . 
+wd:Q467623 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1933" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Oleg Grigoryevich Makarov" . 
+wd:Q535280 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1941" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Yury Vasilyevich Malyshev" . 
+wd:Q470256 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1940" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Gennadi Strekalov" . 
+wd:Q502963 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1929" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Richard F. Gordon" . 
+wd:Q561878 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1957" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Michael Foreman" . 
+wd:Q462132 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1935" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Story Musgrave" . 
+wd:Q473221 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1956" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Mark L. Polansky" . 
+wd:Q461807 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1972" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Maksim Surayev" . 
+wd:Q465724 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1942" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Anatoly Berezovoy" . 
+wd:Q505530 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1965" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Andrew J. Feustel" . 
+wd:Q461777 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1959" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Timothy Creamer" . 
+wd:Q470059 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1969" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Liu Wang" . 
+wd:Q506349 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1955" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Andrew M. Allen" . 
+wd:Q519268 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1936" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "C. Gordon Fullerton" . 
+wd:Q461872 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1962" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Gregory Chamitoff" . 
+wd:Q520176 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1967" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Shane Kimbrough" . 
+wd:Q523835 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1970" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Robert L. Behnken" . 
+wd:Q555679 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1966" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Aleksandr Skvortsov" . 
+wd:Q536632 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1932" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Paul J. Weitz" . 
+wd:Q557585 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1955" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Stephen Robinson" . 
+wd:Q520166 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1962" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Gregory H. Johnson" . 
+wd:Q488043 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1928" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Anatoly Filipchenko" . 
+wd:Q495632 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1932" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Richard E. Lawyer" . 
+wd:Q520334 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1960" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Mikhail Korniyenko" . 
+wd:Q536777 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1960" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Richard Mastracchio" . 
+wd:Q468250 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1935" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Vladimir Aksyonov" . 
+wd:Q519124 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1950" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "George Nelson" . 
+wd:Q466513 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1942" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Vladimir Dzhanibekov" . 
+wd:Q488008 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1941" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Anatolii Levchenko" . 
+wd:Q472683 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1964" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Nie Haisheng" . 
+wd:Q560360 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1951" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Talgat Musabayev" . 
+wd:Q535234 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1967" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Konstantin Kozeyev" . 
+wd:Q493699 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1944" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Paul Scully-Power" . 
+wd:Q461788 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1956" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "David Wolf" . 
+wd:Q461795 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1953" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Robert Thirsk" . 
+wd:Q467732 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1951" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Musa Manarov" . 
+wd:Q461840 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1966" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Jing Haipeng" . 
+wd:Q487622 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1969" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Anatoli Ivanishin" . 
+wd:Q519149 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1936" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Robert F. Overmyer" . 
+wd:Q499636 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1976" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Andreas Mogensen" . 
+wd:Q557082 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1966" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Liu Boming" . 
+wd:Q460440 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1930" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "William R. Pogue" . 
+wd:Q513131 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1950" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Kenneth Cockrell" . 
+wd:Q520760 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1949" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Yuri Baturin" . 
+wd:Q539337 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1951" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Thomas Akers" . 
+wd:Q501697 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1946" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "John M. Lounge" . 
+wd:Q534597 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1936" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Robert A. Parker" . 
+wd:Q472491 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1942" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Gennadi Sarafanov" . 
+wd:Q521395 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1948" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Mamoru Mohri" . 
+wd:Q463086 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1964" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Stephen Bowen" . 
+wd:Q533560 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1960" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Marianne Merchez" . 
+wd:Q471486 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1948" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Viktor Afanasyev" . 
+wd:Q528832 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1949" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "James S. Voss" . 
+wd:Q531065 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1954" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Steve MacLean" . 
+wd:Q554409 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1962" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Barry E. Wilmore" . 
+wd:Q471513 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1966" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "John Danny Olivas" . 
+wd:Q537279 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1960" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Steven Swanson" . 
+wd:Q468258 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1946" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Toktar Aubakirov" . 
+wd:Q538639 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1937" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Valentin Bondarenko" . 
+wd:Q708489 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1961" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Yury Onufriyenko" . 
+wd:Q706939 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1957" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Dominic L. Pudwill Gorie" . 
+wd:Q682970 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1924" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Robert A. Rushworth" . 
+wd:Q707736 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1940" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Taylor G. Wang" . 
+wd:Q704147 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1956" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Michael L. Gernhardt" . 
+wd:Q722390 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1926" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Karl Gordon Henize" . 
+wd:Q706849 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1960" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Kevin A. Ford" . 
+wd:Q705626 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1980" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Wang Yaping" . 
+wd:Q706809 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1910" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Sergei Anokhin" . 
+wd:Q634822 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1944" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "James van Hoften" . 
+wd:Q643556 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1962" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Alvin Drew" . 
+wd:Q709921 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1951" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "William S. McArthur" . 
+wd:Q719911 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1944" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Jeffrey A. Hoffman" . 
+wd:Q634141 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1930" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Theodore Freeman" . 
+wd:Q607394 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1955" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Richard Hieb" . 
+wd:Q715126 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1963" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Wu Jie" . 
+wd:Q720194 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1946" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Michael Coats" . 
+wd:Q718630 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1952" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "James P. Bagian" . 
+wd:Q719926 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1929" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "William E. Thornton" . 
+wd:Q704355 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1931" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Charles Bassett" . 
+wd:Q704639 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1952" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Rodolfo Neri Vela" . 
+wd:Q658221 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1946" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Richard O. Covey" . 
+wd:Q728371 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1954" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Vasily Tsibliyev" . 
+wd:Q725848 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1965" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "William Oefelein" . 
+wd:Q720361 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1946" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Steven R. Nagel" . 
+wd:Q722106 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1954" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Gregory C. Johnson" . 
+wd:Q822249 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1956" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Bernard A. Harris, Jr." . 
+wd:Q820606 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1937" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Irina Solovyova" . 
+wd:Q706739 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1961" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Scott E. Parazynski" . 
+wd:Q720191 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1930" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Edward Givens" . 
+wd:Q727572 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1954" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Umberto Guidoni" . 
+wd:Q722667 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1951" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Charles E. Brady Jr." . 
+wd:Q724552 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1952" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Jim Wetherbee" . 
+wd:Q703819 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1957" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Scott J. Horowitz" . 
+wd:Q649109 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1946" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "James C. Adamson" . 
+wd:Q707626 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1930" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Don L. Lind" . 
+wd:Q574124 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1942" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Anthony W. England" . 
+wd:Q703865 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1959" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Michael J. Bloomfield" . 
+wd:Q609639 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1942" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "John E. Blaha" . 
+wd:Q732906 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1936" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Loren Acton" . 
+wd:Q706916 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1964" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Satoshi Furukawa" . 
+wd:Q730170 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1960" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Yuri Shargin" . 
+wd:Q721397 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1948" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Jean-Pierre Haigneré" . 
+wd:Q722142 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1969" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Dmitri Kondratyev" . 
+wd:Q720172 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1946" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Terry Hart" . 
+wd:Q717654 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1942" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Donald E. Williams" . 
+wd:Q708689 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1952" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Vladimir Vasyutin" . 
+wd:Q706978 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1961" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Frederick W. Sturckow" . 
+wd:Q620632 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1957" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Aleksandr Lazutkin" . 
+wd:Q641389 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1953" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Nikolai Budarin" . 
+wd:Q708484 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1949" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Oleg Atkov" . 
+wd:Q725339 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1958" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Brent W. Jett" . 
+wd:Q711010 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1953" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Aleksandr Poleshchuk" . 
+wd:Q709634 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1953" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Valery Korzun" . 
+wd:Q708395 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1921" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Joseph A. Walker" . 
+wd:Q730220 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1964" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Salizhan Sharipov" . 
+wd:Q703321 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1949" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Marc Garneau" . 
+wd:Q727902 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1958" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Sergei Treshchov" . 
+wd:Q739214 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1954" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "James F. Reilly" . 
+wd:Q706859 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1965" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Stanley G. Love" . 
+wd:Q709646 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1932" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Clifton Williams" . 
+wd:Q573719 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1950" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Winston E. Scott" . 
+wd:Q719635 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1932" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Lodewijk van den Berg" . 
+wd:Q708452 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1951" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Aleksandr Laveykin" . 
+wd:Q720124 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1941" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Frederick Hauck" . 
+wd:Q798166 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1956" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "James H. Newman" . 
+wd:Q573258 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1971" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Michael Strahan" . 
+wd:Q822726 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1942" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Dumitru Dediu" . 
+wd:Q717641 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1944" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Loren Shriver" . 
+wd:Q611704 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1956" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "James D. Halsell" . 
+wd:Q706899 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1964" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Nicholas Patrick" . 
+wd:Q644029 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1948" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Robert J. Cenker" . 
+wd:Q718729 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1943" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "John Oliver Creighton" . 
+wd:Q725659 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1953" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Aleksandr Nikolayevich Balandin" . 
+wd:Q720351 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1944" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "David M. Walker" . 
+wd:Q725233 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1945" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Bjarni Tryggvason" . 
+wd:Q705636 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1949" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Frank L. Culbertson" . 
+wd:Q644837 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1932" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Gerald Carr" . 
+wd:Q720160 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1939" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "John M. Fabian" . 
+wd:Q706965 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1962" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Michael T. Good" . 
+wd:Q632907 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1964" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Leland D. Melvin" . 
+wd:Q716333 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1962" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Jose M. Hernandez" . 
+wd:Q722127 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1967" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Randolph Bresnik" . 
+wd:Q592219 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1972" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Anton Shkaplerov" . 
+wd:Q718499 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1943" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Jon McBride" . 
+wd:Q660570 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1951" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Steven Hawley" . 
+wd:Q746108 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1952" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Mark C. Lee" . 
+wd:Q709931 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1963" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Ed Lu" . 
+wd:Q709935 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1960" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Leroy Chiao" . 
+wd:Q621462 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1927" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Elliot See" . 
+wd:Q722679 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1958" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Jean-François Clervoy" . 
+wd:Q692263 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1945" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "James Buchli" . 
+wd:Q644705 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1955" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Carl E. Walz" . 
+wd:Q719921 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1939" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "S. David Griggs" . 
+wd:Q749845 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1940" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Roger K. Crouch" . 
+wd:Q704554 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1962" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Li Qinglong" . 
+wd:Q722513 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1943" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Daniel Brandenstein" . 
+wd:Q720182 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1945" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Mike Mullane" . 
+wd:Q573473 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1944" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Charles L. Veach" . 
+wd:Q1334023 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1952" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Ronald M. Sega" . 
+wd:Q956160 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1950" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Gennady Manakov" . 
+wd:Q1507223 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1956" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "G. David Low" . 
+wd:Q1355634 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1957" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Gregory T. Linteris" . 
+wd:Q971200 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1960" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "James A. Pawelczyk" . 
+wd:Q1009884 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1946" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "German Szemjonovics Arzamazov" . 
+wd:Q1064149 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1955" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Charles D. Gemar" . 
+wd:Q1373458 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1952" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Thomas J. Hennen" . 
+wd:Q834956 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1940" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Boris Andreyev" . 
+wd:Q1372276 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1951" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Stephen S. Oswald" . 
+wd:Q1393554 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1944" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "John-David F. Bartoe" . 
+wd:Q1373573 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1952" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "William A. Pailes" . 
+wd:Q1800097 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1950" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Carl J. Meade" . 
+wd:Q1384803 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1943" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Samuel T. Durrance" . 
+wd:Q1494855 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1948" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Gary Payton" . 
+wd:Q1322669 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1956" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Kevin R. Kregel" . 
+wd:Q1064074 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1948" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Charles D. Walker" . 
+wd:Q1266359 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1963" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Philippe Perrin" . 
+wd:Q938428 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1949" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Terrence W. Wilcutt" . 
+wd:Q1687593 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1976" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Jeremy Hansen" . 
+wd:Q1429300 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1952" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "William F. Readdy" . 
+wd:Q1076962 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1959" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Chris Hadfield" . 
+wd:Q2032646 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1951" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Sidney M. Gutierrez" . 
+wd:Q1926804 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1953" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Michael A. Baker" . 
+wd:Q1339046 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1949" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Michel Tognini" . 
+wd:Q1376469 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1955" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Jerry M. Linenger" . 
+wd:Q1282566 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1934" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "John S. Bull" . 
+wd:Q920936 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1956" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Ken Bowersox" . 
+wd:Q1545374 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1956" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Gregory J. Harbaugh" . 
+wd:Q935071 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1949" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Jean-Jacques Favier" . 
+wd:Q1100745 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1950" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Eugeni Vladimirovich Saley" . 
+wd:Q974431 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1929" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "William J. Knight" . 
+wd:Q1394857 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1976" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Luca Parmitano" . 
+wd:Q1372222 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1943" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Michael J. McCulley" . 
+wd:Q912120 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1953" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Brian Duffy" . 
+wd:Q1904202 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1956" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Martin J. Fettman" . 
+wd:Q2036770 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1946" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Richard N. Richards" . 
+wd:Q1395516 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1930" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Bill Dana" . 
+wd:Q948673 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1957" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Daniel W. Bursch" . 
+wd:Q1384788 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1956" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Kent Rominger" . 
+wd:Q1122204 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1930" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Michael J. Adams" . 
+wd:Q956842 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1959" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Maurizio Cheli" . 
+wd:Q1338436 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1949" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Robert D. Cabana" . 
+wd:Q975217 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1966" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Sergey Revin" . 
+wd:Q978562 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1951" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Frederick W. Leslie" . 
+wd:Q1338895 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1956" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Jay C. Buckey" . 
+wd:Q1338348 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1955" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Thomas David Jones" . 
+wd:Q957368 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1946" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Franco Malerba" . 
+wd:Q955842 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1921" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Albert Scott Crossfield" . 
+wd:Q2143342 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1955" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Renate Brümmer" . 
+wd:Q1376909 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1948" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Guy Gardner" . 
+wd:Q1243689 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1954" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Sergey Moshchenko" . 
+wd:Q995007 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1946" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Bryan D. O'Connor" . 
+wd:Q1338950 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1943" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Roy D. Bridges Jr." . 
+wd:Q1376966 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1954" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Kevin P. Chilton" . 
+wd:Q1899032 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1952" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Mario Runco, Jr." . 
+wd:Q2036814 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1949" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Albert Sacco" . 
+wd:Q1065133 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1955" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Charles J. Precourt" . 
+wd:Q944386 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1946" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Wubbo Ockels" . 
+wd:Q938350 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1959" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Carlos I. Noriega" . 
+wd:Q1240263 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1952" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Donald R. McMonagle" . 
+wd:Q1385274 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1951" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Ronald A. Parise" . 
+wd:Q1239684 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1955" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Donald A. Thomas" . 
+wd:Q1174171 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1952" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Charles Edward Jones" . 
+wd:Q1371854 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1952" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Michael R. Clifford" . 
+wd:Q1018622 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1948" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Byron K. Lichtenberg" . 
+wd:Q986622 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1940" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Brian O'Leary" . 
+wd:Q1382090 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1957" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Miguel Sebastián Gascón" . 
+wd:Q2036753 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1942" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Robert C. Springer" . 
+wd:Q1371840 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1956" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Richard A. Searfoss" . 
+wd:Q986620 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1933" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Anthony Llewellyn" . 
+wd:Q1178369 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1954" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Mohammad Dauran Ghulam Masum" . 
+wd:Q948775 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1962" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Robert Curbeam" . 
+wd:Q957250 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1949" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Jay Apt" . 
+wd:Q1173930 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1950" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "David C. Hilmers" . 
+wd:Q1345924 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1954" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Jeffrey Ashby" . 
+wd:Q935510 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1958" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Joe F. Edwards" . 
+wd:Q927249 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1969" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Oleg Skripochka" . 
+wd:Q916497 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1937" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Zenon Jankowski" . 
+wd:Q1100024 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1963" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Clemens Lothaller" . 
+wd:Q1100407 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1949" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Yekaterina Ivanova" . 
+wd:Q1338925 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1943" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "John Casper" . 
+wd:Q1246221 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1943" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Ravish Malhotra" . 
+wd:Q1371289 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1951" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Mark N. Brown" . 
+wd:Q1866915 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1952" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "L. Blaine Hammond" . 
+wd:Q918798 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1940" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Mike Melvill" . 
+wd:Q823491 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1949" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Maidarzhavyn Ganzorig" . 
+wd:Q985049 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1944" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Sherwood C. Spring" . 
+wd:Q1333261 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1958" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Peter Wisoff" . 
+wd:Q1162918 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1953" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Daniel T. Barry" . 
+wd:Q928034 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1970" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Aleksandr Samokutyayev" . 
+wd:Q1174077 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1949" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "David Leestma" . 
+wd:Q1336455 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1950" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Lawrence J. DeLucas" . 
+wd:Q1407313 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1952" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Terence T. Henricks" . 
+wd:Q1323571 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1951" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Kenneth S. Reightler, Jr." . 
+wd:Q1338912 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1947" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Sonny Carter" . 
+wd:Q13519676 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1982" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Nikolai Tikhonov" . 
+wd:Q3270358 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1934" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Curt Michel" . 
+wd:Q3175883 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1970" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Jeanette J. Epps" . 
+wd:Q13484630 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1973" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Josh A. Cassada" . 
+wd:Q9381660 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1937" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Q9381660" . 
+wd:Q7129713 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1966" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Pan Zhanchun" . 
+wd:Q6160001 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1983" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Jared Isaacman" . 
+wd:Q3574186 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1959" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Yvonne Cagle" . 
+wd:Q9601011 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1947" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Aleksey Boroday" . 
+wd:Q3499300 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1931" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Duane Graveline" . 
+wd:Q4795114 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1977" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Jessica Meir" . 
+wd:Q10340525 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1938" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Oleg Kononenko" . 
+wd:Q13500570 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1979" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Anne McClain" . 
+wd:Q4831087 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1972" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Aydyn Aimbetov" . 
+wd:Q6695979 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1957" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Luca Urbani" . 
+wd:Q13500192 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1979" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Christina Koch" . 
+wd:Q14948501 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1950" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Ricardo Peralta y Fabi" . 
+wd:Q3561847 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1956" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Vladimir Pletser" . 
+wd:Q3625307 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1939" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Donald Holmquest" . 
+wd:Q7325625 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1947" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Richard Farrimond" . 
+wd:Q13500735 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1976" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Andrew R. Morgan" . 
+wd:Q7034625 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1969" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Nik Halik" . 
+wd:Q8061829 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1975" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Yusaku Maezawa" . 
+wd:Q4666165 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1948" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Abdulmohsen Al-Bassam" . 
+wd:Q3294252 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1966" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Mark T. Vande Hei" . 
+wd:Q6740250 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1980" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Maksim Ponomaryov" . 
+wd:Q12040315 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1962" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Nadezhda Kuzhelnaya" . 
+wd:Q6390486 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1935" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Ken Money" . 
+wd:Q4181402 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1956" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Sergey Zhukov" . 
+wd:Q4994273 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1941" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Tatyana Kuznetsova" . 
+wd:Q4098485 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1936" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Eduard Buynovski" . 
+wd:Q3030934 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1968" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Michael S. Hopkins" . 
+wd:Q3157177 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1974" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Jack D. Fischer" . 
+wd:Q3197699 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1973" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Kjell Lindgren" . 
+wd:Q14946486 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1957" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Michael Warren Booen" . 
+wd:Q3479150 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1976" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Serena M. Auñón-Chancellor" . 
+wd:Q13889299 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1953" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Irina Rudolfovna Pronina" . 
+wd:Q6659656 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1956" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Livingston L. Holder, Jr." . 
+wd:Q3116390 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1975" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Gregory Reid Wiseman" . 
+wd:Q7454059 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1974" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Sergey Ryzhikov" . 
+wd:Q12051501 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1963" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Sergej Kostěnko" . 
+wd:Q2315605 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1958" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Fernando Caldeiro" . 
+wd:Q13492872 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1975" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Nick Hague" . 
+wd:Q4715991 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1971" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Aleksey Ovchinin" . 
+wd:Q5975489 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1970" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Kimiya Yui" . 
+wd:Q9364420 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1963" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Chen Quan" . 
+wd:Q3476196 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1965" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Scott D. Tingle" . 
+wd:Q5975593 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1975" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Takuya Ōnishi" . 
+wd:Q9310786 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1921" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Robert Everett Stevenson" . 
+wd:Q13429632 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1971" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Angelo Vermeulen" . 
+wd:Q9177589 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1938" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Boris Polakow" . 
+wd:Q14948500 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1957" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Robert Jackson Wood" . 
+wd:Q5237017 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1957" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "David Mackay" . 
+wd:Q14931491 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1945" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Mary Helen Johnston" . 
+wd:Q2474284 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1951" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Magomed Tolboyev" . 
+wd:Q11337716 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1950" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "José Armando López Falcón" . 
+wd:Q6490164 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1956" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Larry D. James" . 
+wd:Q7258156 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1932" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Anatoli Kartashov" . 
+wd:Q3498668 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1953" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Stephen D. Thorne" . 
+wd:Q14492036 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1955" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Fulier Michal" . 
+wd:Q8070504 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1939" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Zhanna Yorkina" . 
+wd:Q3329196 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1974" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Sergey Ryazansky" . 
+wd:Q2632140 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1980" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Faiz Khaleed" . 
+wd:Q11762815 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1948" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Louis William Butterworth" . 
+wd:Q11685717 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1932" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Anatoly Kuklin" . 
+wd:Q7238716 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1952" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Pratiwi Sudarmono" . 
+wd:Q10335385 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1941" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Nail Sattarov" . 
+wd:Q3501233 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1971" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Konstantin Valkov" . 
+wd:Q4131995 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1936" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Sergey Nikolaevich Gaidukov" . 
+wd:Q8070347 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1966" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Zhang Xiaoguang" . 
+wd:Q5256924 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1966" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Deng Qingming" . 
+wd:Q2720489 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1922" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "John B. McKay" . 
+wd:Q7086024 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1970" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Oleg Artemyev" . 
+wd:Q6969146 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1936" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Nathan J. Lindsay" . 
+wd:Q3492123 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1976" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Yelena Serova" . 
+wd:Q7358218 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1947" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Roger G. DeKok" . 
+wd:Q14861711 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1941" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Michael Lampton" . 
+wd:Q5018797 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1971" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Siva Vanajah" . 
+wd:Q13499227 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1976" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Victor J. Glover" . 
+wd:Q2655329 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1977" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Alexander Misurkin" . 
+wd:Q5970982 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1976" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Norishige Kanai" . 
+wd:Q5112759 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1960" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Christopher Loria" . 
+wd:Q3391832 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1965" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Jesús Calleja" . 
+wd:Q6246601 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1962" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Neil Woodward" . 
+wd:Q2620784 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1924" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Robert Michael White" . 
+wd:Q2705403 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1935" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Philip K. Chapman" . 
+wd:Q13500573 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1977" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Nicole Mann" . 
+wd:Q9095339 wdt:P31 wd:Q5 ; 
+  wdt:P569 "2000" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Zhao Chuandong" . 
+wd:Q4196202 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1950" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Leonid Ivanov" . 
+wd:Q12814990 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1961" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Krasimir Stojanow" . 
+wd:Q3553627 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1933" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Valentina Ponomaryova" . 
+wd:Q2742047 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1963" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Patricia Robertson" . 
+wd:Q3194085 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1978" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Kathleen Rubins" . 
+wd:Q21106378 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1983" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Denis Matveev" . 
+wd:Q94806666 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1909" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Hans Schneider" . 
+wd:Q30157792 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1977" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Raja Chari" . 
+wd:Q26776784 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1983" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Sergey Kud-Sverchkov" . 
+wd:Q30157738 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1984" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Jonny Kim" . 
+wd:Q17593755 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1940" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Gurgens Ivanjans" . 
+wd:Q85867505 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1981" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Andrey Fedyayev" . 
+wd:Q16518899 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1958" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "David Henry Matthiesen" . 
+wd:Q125575516 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1989" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Li Cong" . 
+wd:Q28716025 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1984" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Mariam Fardous" . 
+wd:Q21856852 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1985" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Ivan Vagner" . 
+wd:Q18352451 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1984" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Anna Kikina" . 
+wd:Q32538663 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1988" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Jenni Sidey-Gibbons" . 
+wd:Q26837347 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1935" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Mikhail Lisun" . 
+wd:Q21481122 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1937" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Eduard Stepanov" . 
+wd:Q128996430 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1982" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Chun Wang" . 
+wd:Q85859878 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1978" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Pyotr Dubrov" . 
+wd:Q17426873 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1939" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Mars Fätxullin" . 
+wd:Q16521232 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1964" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Kikuchi Ryōko" . 
+wd:Q50379654 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1982" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Ignat Ignatov" . 
+wd:Q60825146 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1939" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Q60825146" . 
+wd:Q30202712 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1988" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Jessica Watkins" . 
+wd:Q103847789 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1974" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Mark Serov" . 
+wd:Q55615701 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1979" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Karl Jacob" . 
+wd:Q16521963 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1953" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Munir Habib Habib" . 
+wd:Q124770380 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1935" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Eduard Pavlovich Kugno" . 
+wd:Q16521187 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1947" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Keith Charles Wright" . 
+wd:Q16522713 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1959" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Scott Duane Vangen" . 
+wd:Q27336250 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1978" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Chen Dong" . 
+wd:Q16522333 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1957" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Paul David Ronney" . 
+wd:Q16521836 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1957" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Michael Eugene Belt" . 
+wd:Q103929698 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1978" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Oleg Blinov" . 
+wd:Q56725368 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1983" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Hazza Al Mansouri" . 
+wd:Q44059568 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1982" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Joshua Kutryk" . 
+wd:Q30323480 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1970" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Sian Proctor" . 
+wd:Q28195006 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1944" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Anatoly Ivanovich Dedkovs" . 
+wd:Q24005946 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1940" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Valeriy Makrushin" . 
+wd:Q30157819 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1987" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Kayla Barron" . 
+wd:Q18236847 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1953" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Aleksandr Borodin" . 
+wd:Q30611798 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1975" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Robert Hines" . 
+wd:Q30157794 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1985" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Warren Hoburg" . 
+wd:Q16522978 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1963" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Szergej Valerjevics Kosztyenko" . 
+wd:Q15222587 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1960" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Alexander William Dunlap" . 
+wd:Q125575710 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1987" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Li Guangsu" . 
+wd:Q18235674 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1954" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Galina Amelkina" . 
+wd:Q16617467 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1952" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Vladimir Gevorkian" . 
+wd:Q21154027 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1975" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Sergey Prokopyev" . 
+wd:Q24176135 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1950" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Larry Connor" . 
+wd:Q104076823 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1980" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Jaison Robinson" . 
+wd:Q16139803 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1984" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Pirada Techawichit" . 
+wd:Q50379072 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1984" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Nikolay Chub" . 
+wd:Q23762547 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1989" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Kellie Gerardi" . 
+wd:Q30157793 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1981" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Matthew Dominick" . 
+wd:Q30315159 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1975" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Francisco Rubio" . 
+wd:Q15197198 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1962" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Alan Eugene Johnston" . 
+wd:Q16521012 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1970" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Yaroslav Pustovyi" . 
+wd:Q58914114 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1991" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Rosemary Coogan" . 
+wd:Q14962576 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1942" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Gerard Edward Magilton" . 
+wd:Q87399454 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1982" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Sophie Adenot" . 
+wd:Q30157791 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1987" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Zena Cardman" . 
+wd:Q128988753 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1986" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Jannicke Mikkelsen" . 
+wd:Q16522515 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1959" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Ray Glynn Holt" . 
+wd:Q62030546 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1986" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Christina Birch" . 
+wd:Q89641962 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1988" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Raphaël Liégeois" . 
+wd:Q28086396 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1985" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Nicola Winter" . 
+wd:Q16213049 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1939" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Wally Funk" . 
+wd:Q17593757 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1955" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Alexander Jabloncev" . 
+wd:Q17426654 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1947" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Q17426654" . 
+wd:Q16523336 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1955" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Timothy Kristian Charles Mace" . 
+wd:Q85861593 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1984" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Sergey Korsakov" . 
+wd:Q50379760 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1983" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Dmitrij Petelin" . 
+wd:Q30157740 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1983" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Jasmin Moghbeli" . 
+wd:Q19366412 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1926" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Georgi Katys" . 
+wd:Q98631581 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1989" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Amelie Schoenenwald" . 
+wd:Q126127455 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1991" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Tibor Kapu" . 
+wd:Q16153519 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1967" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Mukhtar Aymakhanov" . 
+wd:Q50379793 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1975" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Aleksej Homenčuk" . 
+wd:Q16617489 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1942" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Władimir Kozielski" . 
+wd:Q16518418 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1943" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Charles R. Chappell" . 
+wd:Q16522811 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1953" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Stanley Norbert Koszelak" . 
+wd:Q88354540 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1989" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Sara García Alonso" . 
+wd:Q16213285 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1970" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Dylan Taylor" . 
+wd:Q30157742 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1983" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Loral O'Hara" . 
+wd:Q28413601 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1980" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Ye Guangfu" . 
+wd:Q101960859 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1958" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Eytan Stibbe" . 
+wd:Q15114656 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1943" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Joseph Markel Prahl" . 
+wd:Q26255563 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1969" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Andrei Babkin" . 
+wd:Q99495235 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1988" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Carmen Possnig" . 
+wd:Q17427763 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1931" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Mikhail Fedorovich Rebrov" . 
+wd:Q60050774 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1966" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Victor Vescovo" . 
+wd:Q126141912 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1989" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Cserényi Gyula" . 
+wd:Q56486505 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1981" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Sultan Al Niadi" . 
+wd:Q57059308 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1987" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Meganne Christian" . 
+wd:Q16521492 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1935" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Laurence Retman Young" . 
+wd:Q112549568 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1988" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Michael Voplatka" . 
+wd:Q120263526 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1936" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Q120263526" . 
+wd:Q128307670 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1953" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Turki bin Saud bin Mohammed Al Saud" . 
+wd:Q105575990 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1983" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Swati Mohan" . 
+wd:Q112504817 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1989" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Q112504817" . 
+wd:Q112547470 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1948" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Alessandro De Iaco Veris" . 
+wd:Q115388013 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1986" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Aleš Svoboda" . 
+wd:Q95163396 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1932" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Otakar Šaffek" . 
+wd:Q112559966 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1981" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Davide Sivolella" . 
+wd:Q95171079 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1932" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Georgij Karský" . 
+wd:Q97188739 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1952" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Q97188739" . 
+wd:Q116777658 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1986" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Zuzanna Kulińska-Kępa" . 
+wd:Q112535527 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1936" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Manfred von Ehrenfried" . 
+wd:Q112535034 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1967" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Bangyeop Kim" . 
+wd:Q112560924 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1943" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "John T. Betts" . 
+wd:Q112347270 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1944" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Q112347270" . 
+wd:Q112533599 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1955" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "David Shayler" . 
+wd:Q107743727 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1995" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Miracle Igbokwe" . 
+wd:Q112549780 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1958" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Hermann Woydt" . 
+wd:Q112514214 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1980" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Mykel J. Kochenderfer" . 
+wd:Q112502397 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1956" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Andrew Wilson" . 
+wd:Q95477089 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1920" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Karel Mišoň" . 
+wd:Q112531541 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1972" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Michel van Pelt" . 
+wd:Q96184923 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1938" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "J. David Powell" . 
+wd:Q123738871 wdt:P31 wd:Q5 ; 
+  wdt:P569 "2004" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Josh Universe" . 
+wd:Q116786187 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1992" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Ali AlGhamdi" . 
+wd:Q112206264 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1976" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Cai Xuzhe" . 
+wd:Q109953976 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1985" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Deniz Burnham" . 
+wd:Q118799016 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1986" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Gui Haichao" . 
+wd:Q105201181 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1955" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "John Shoffner" . 
+wd:Q109490394 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1982" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Alexander Grebenkin" . 
+wd:Q114690441 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1976" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Zhang Lu" . 
+wd:Q118185981 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1995" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Anastasia Lenkova" . 
+wd:Q118096833 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1992" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Tuva Cihangir Atasever" . 
+wd:Q109490108 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1986" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Oleg Platonov" . 
+wd:Q118114238 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1988" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Sergej Teterjatnikov" . 
+wd:Q115388560 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1989" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Marco Sieber" . 
+wd:Q108392200 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1974" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Walter Villadei" . 
+wd:Q110916349 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1985" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Anna Menon" . 
+wd:Q106460857 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1988" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Mohammad Al Mulla" . 
+wd:Q109954037 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1983" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Jessica Wittner" . 
+wd:Q124670654 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1982" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Ajit Krishnan" . 
+wd:Q130720159 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1990" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Song Lingdong" . 
+wd:Q123186517 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1988" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Jiang Xinlin" . 
+wd:Q115388535 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1988" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Pablo Álvarez Fernández" . 
+wd:Q109952432 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1984" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Marcos Berríos" . 
+wd:Q106460806 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1993" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Nora Al Matrooshi" . 
+wd:Q124670652 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1985" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Shubhanshu Shukla" . 
+wd:Q109860538 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1961" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Lane Bess" . 
+wd:Q115328941 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1992" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Arnaud Prost" . 
+wd:Q115388242 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1991" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Andrea Patassa" . 
+wd:Q118364894 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1993" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Sara Sabry" . 
+wd:Q118799052 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1986" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Zhu Yangzhu" . 
+wd:Q115388065 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1980" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Marcus Wandt" . 
+wd:Q115387945 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1984" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Sławosz Uznański-Wiśniewski" . 
+wd:Q109968900 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1982" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Jack Hathaway" . 
+wd:Q107258209 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1975" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Tang Hongbo" . 
+wd:Q107401704 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1938" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Dianne Kasnic Prinz" . 
+wd:Q116765320 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1988" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Rayyanah Barnawi" . 
+wd:Q110916469 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1973" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Scott Poteet" . 
+wd:Q109952150 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1988" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Nichole Ayers" . 
+wd:Q118093594 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1979" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Alper Gezeravcı" . 
+wd:Q109490152 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1986" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Q109490152" . 
+wd:Q124670657 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1982" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Angad Pratap" . 
+wd:Q109950137 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1976" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Anil Menon" . 
+wd:Q109968497 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1979" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Luke Delaney" . 
+wd:Q108710624 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1972" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Glen de Vries" . 
+wd:Q109493060 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1984" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Konstantin Borisov" . 
+wd:Q109491455 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1990" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Kirill Peskov" . 
+wd:Q124669921 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1976" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Prasanth Nair" . 
+wd:Q116945702 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1995" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Ayu Yoneda" . 
+wd:Q116765522 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1992" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Ali AlQarni" . 
+wd:Q109491621 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1947" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Larisa Grigoriyevna Pozharskaya" . 
+wd:Q116945717 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1970" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Makoto Suwa" . 
+wd:Q109969080 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1983" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Christopher Williams" . 
+wd:Q107247663 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1965" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Q107247663" . 
+wd:Q130720158 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1990" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Wang Haoze" . 
+wd:Q106823104 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1985" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Yozo Hirano" . 
+wd:Q109493064 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1990" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Aleksandr Gorbunov" . 
+wd:Q109953238 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1986" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Andre Douglas" . 
+wd:Q130909094 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1943" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "John Casper" . 
+wd:Q115388093 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1992" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Anthea Comellini" . 
+wd:Q109491693 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1953" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Yury Prikhod'ko" . 
+wd:Q105627106 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1991" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Hayley Arceneaux" . 
+wd:Q106286882 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1979" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Christopher Sembroski" . 
+wd:Q108710823 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1977" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Chris Boshuizen" . 
+wd:Q123186464 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1989" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Tang Shengjie" . 
+wd:Q109490367 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1992" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Alexey Zubritsky" . 
+wd:Q110916738 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1994" ; 
+  wdt:P21 wd:Q6581072 ; 
+  rdfs:label "Sarah Gillis" . 
+wd:Q111845109 wdt:P31 wd:Q5 ; 
+  wdt:P569 "1964" ; 
+  wdt:P21 wd:Q6581097 ; 
+  rdfs:label "Hamish Harding" . 
