@@ -8,37 +8,127 @@
   {
     "kind": 2,
     "language": "sparql",
-    "value": "### Number of persons in our population\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nSELECT (COUNT(*) as ?n)\nWHERE {\n    GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>\n        {?s a wd:Q5.}\n}\n",
+    "value": "### Number of persons in our population\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nSELECT (COUNT(*) as ?n)\nWHERE {\n    GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n        {?s a wd:Q5.}\n}\n",
     "metadata": {}
   },
   {
     "kind": 2,
     "language": "sparql",
-    "value": "### Some examples\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nSELECT ?s ?label ?birthYear\nWHERE {\n    GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>\n        {?s a wd:Q5;\n            rdfs:label ?label;\n            wdt:P569 ?birthYear}\n}\nORDER BY ?s\nLIMIT 3\n",
+    "value": "#corrigé\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nSELECT (COUNT(?s) as ?n) WHERE {\n  GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md> {\n    ?s wdt:P31 wd:Q5 .  # \"instance de\" au lieu de \"a\"\n  }\n}",
     "metadata": {}
   },
   {
     "kind": 2,
     "language": "sparql",
-    "value": "### Prepare and inspect the data to be imported\n\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nCONSTRUCT {?item wdt:P27 ?citizenship.\n            ?citizenship rdfs:label ?citizenshipLabel}\nWHERE\n    {\n        GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>\n\n        ## Find the persons in the imported graph\n        {SELECT ?item\n        WHERE \n                {?item a wd:Q5.}\n        ORDER BY ?item      \n        OFFSET 0\n        #OFFSET 10000\n        #OFFSET 20000\n        LIMIT 10\n\n        }\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n            {\n                ?item wdt:P27 ?citizenship.\n                BIND (?citizenshipLabel as ?citizenshipLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n            }\n                \n        }",
+    "value": "### Some examples\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nSELECT ?s ?label ?birthYear\nWHERE {\n    GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n        {?s a wd:Q5;\n            rdfs:label ?label;\n            wdt:P569 ?birthYear}\n}\nORDER BY ?s\nLIMIT 3\n",
     "metadata": {}
   },
   {
     "kind": 2,
     "language": "sparql",
-    "value": "### To be sure, the insert query has to be carried out directly on the Allegrograph server\n# but it also could work if executed in this notebook\n## Also, you have to carry it out in three steps. The accepted limit by Wikidata \n## of instances in a variable ('item' in our case) appears to be 10000.\n## You therefore have to have three steps for a population of around 23000 persons  \n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n\n\nWITH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>\nINSERT {?item wdt:P27 ?citizenship.}\nWHERE\n    {\n        ## Find the persons in the imported graph\n        {SELECT ?item\n        WHERE \n                {?item a wd:Q5.}\n        ORDER BY ?item      \n        OFFSET 0\n        #OFFSET 10000\n        #OFFSET 20000\n        LIMIT 10000\n\n        }\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n            {\n                ?item wdt:P27 ?citizenship.\n            }\n                \n        }",
+    "value": "#corrigé \n\n### Some examples (avec P31 ajouté)\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?s ?label ?birthYear\nWHERE {\n    GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md> {\n        { ?s a wd:Q5 }    # Type direct (rdf:type)\n        UNION\n        { ?s wdt:P31 wd:Q5 }  # Instance de (Wikidata standard)\n        \n        ?s rdfs:label ?label ;\n           wdt:P569 ?birthYear .\n    }\n}\nORDER BY ?s\nLIMIT 3",
     "metadata": {}
   },
   {
     "kind": 2,
     "language": "sparql",
-    "value": "### Get the number of created 'citizenships'\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\n\n    SELECT (COUNT(*) as ?n) \n    WHERE {\n        GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>\n            {\n                ?s wdt:P27 ?o.\n            }\n            }\n    ",
+    "value": "### Prepare and inspect the data to be imported\n\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nCONSTRUCT {?item wdt:P27 ?citizenship.\n            ?citizenship rdfs:label ?citizenshipLabel}\nWHERE\n    {\n        GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n\n        ## Find the persons in the imported graph\n        {SELECT ?item\n        WHERE \n                {?item a wd:Q5.}\n        ORDER BY ?item      \n        OFFSET 0\n        #OFFSET 10000\n        LIMIT 10\n\n        }\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n            {\n                ?item wdt:P27 ?country.\n                BIND (?citizenshipLabel as ?citizenshipLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n            }\n                \n        }",
     "metadata": {}
   },
   {
     "kind": 2,
     "language": "sparql",
-    "value": "### Insert the label of the property\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\n\nINSERT DATA {\n  GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>\n  {wdt:P27 rdfs:label 'country of citizenship'.}\n}",
+    "value": "#version corrigé \n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nCONSTRUCT {\n    ?item wdt:P27 ?citizenship.\n    ?citizenship rdfs:label ?citizenshipLabel\n}\nWHERE {\n    GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md> {\n        # Sélection des personnes avec les deux méthodes possibles\n        {\n            SELECT ?item\n            WHERE {\n                { ?item a wd:Q5. }          # Déclaration RDF standard\n                UNION\n                { ?item wdt:P31 wd:Q5. }     # Déclaration Wikidata standard\n            }\n            ORDER BY ?item\n            OFFSET 0\n            LIMIT 10\n        }\n    }\n    \n    # Récupération des nationalités depuis Wikidata\n    SERVICE <https://query.wikidata.org/sparql> {\n        ?item wdt:P27 ?citizenship.\n        SERVICE wikibase:label { \n            bd:serviceParam wikibase:language \"en\". \n            ?citizenship rdfs:label ?citizenshipLabel.\n        }\n    }\n}",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### To be sure, the insert query has to be carried out directly on the Allegrograph server\n# but it also could work if executed in this notebook\n## Also, you have to carry it out in three steps. The accepted limit by Wikidata \n## of instances in a variable ('item' in our case) appears to be 10000.\n## You therefore have to have three steps for a population of around 23000 persons  \n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n\n\nWITH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\nINSERT {?item wdt:P27 ?citizenship.}\nWHERE\n    {\n        ## Find the persons in the imported graph\n        {SELECT ?item\n        WHERE \n                {?item a wd:Q5.}\n        ORDER BY ?item      \n        #OFFSET 8000\n        #OFFSET 16000\n        #OFFSET 24000\n        #OFFSET 32000\n        LIMIT 10000\n\n        }\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n            {\n                ?item wdt:P27 ?citizenship.\n            }\n                \n        }",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Insert the label of the property\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\n\nINSERT DATA {\n  GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n  {wdt:P27 rdfs:label 'country of citizenship'.}\n}",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Get the number of created 'citizenships'\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\n\n    SELECT (COUNT(*) as ?n) \n    WHERE {\n        GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n            {\n                ?s wdt:P27 ?o.\n            }\n            }\n    ",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Persons without a country of citizenship\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nSELECT (COUNT(*) as ?n)\nWHERE \n{GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n        \n    {?item a wd:Q5.\n    MINUS {\n            ?item wdt:P27 ?country   .\n        }     \n    }\n}\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Persons without a country of citizenship (avec P31 inclus corrigé)\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nSELECT (COUNT(*) as ?n)\nWHERE \n{\n    GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n    {\n        # Personnes déclarées soit par rdf:type soit par wdt:P31\n        {\n            ?item a wd:Q5 .          # Déclaration RDF classique\n        }\n        UNION\n        {\n            ?item wdt:P31 wd:Q5 .   # Déclaration Wikidata standard\n        }\n        \n        # Exclusion des personnes ayant une nationalité\n        MINUS {\n            ?item wdt:P27 ?country .\n        }     \n    }\n}",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Persons without a country of citizenship\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nSELECT ?item ?label\nWHERE \n{GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n        \n    {?item a wd:Q5;\n        rdfs:label ?label.\n    MINUS {\n            ?item wdt:P27 ?country   .\n        }     \n    }\n}\nOFFSET 50\nLIMIT 10",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "## Persons without a country of citizenship (with P31 included)\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?item ?label\nWHERE \n{\n    GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n    {\n        # Persons declared either by rdf:type or wdt:P31\n        {\n            ?item a wd:Q5 ;          # RDF type declaration\n                  rdfs:label ?label .\n        }\n        UNION\n        {\n            ?item wdt:P31 wd:Q5 ;    # Wikidata standard declaration\n                  rdfs:label ?label .\n        }\n        \n        # Exclude persons with any citizenship\n        MINUS {\n            ?item wdt:P27 ?country .\n        }\n    }\n}\nORDER BY ?item\nOFFSET 50\nLIMIT 10",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Persons with more than one citizenship\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\n\nSELECT ?citizenship ?citizenshipLabel (COUNT(*) as ?n) \nWHERE {\nGRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n{\n   ?item wdt:P27 ?citizenship.\n    ?citizenship rdfs:label ?citizenshipLabel.\n}\n\n}\nGROUP BY ?citizenship ?citizenshipLabel\nORDER BY DESC(?n)\n\nLIMIT 5",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "#plusieurs nationalités\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?person ?personLabel (GROUP_CONCAT(DISTINCT ?citizenshipLabel; SEPARATOR=\", \") AS ?nationalities) (COUNT(DISTINCT ?citizenship) AS ?nationalityCount)\nWHERE {\n  GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md> {\n    # Identifier les personnes (les deux méthodes)\n    { ?person a wd:Q5 } UNION { ?person wdt:P31 wd:Q5 }\n    \n    # Obtenir les nationalités\n    ?person wdt:P27 ?citizenship .\n    \n    # Obtenir les libellés\n    OPTIONAL { ?person rdfs:label ?personLabel FILTER(LANG(?personLabel) = \"fr\") }\n    OPTIONAL { ?citizenship rdfs:label ?citizenshipLabel FILTER(LANG(?citizenshipLabel) = \"fr\") }\n  }\n}\nGROUP BY ?person ?personLabel\nHAVING (COUNT(DISTINCT ?citizenship) > 1)  # Filtre pour plusieurs nationalités\nORDER BY DESC(?nationalityCount)\nLIMIT 100",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "#toutes les nationalités\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\n# Test 1 : Vérification de base des nationalités\nSELECT ?citizenship (COUNT(?item) as ?count) \nWHERE {\n  GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md> {\n    ?item wdt:P27 ?citizenship .\n  }\n}\nGROUP BY ?citizenship\nORDER BY DESC(?count)\nLIMIT 5",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "### Add missing citizenships\n\nOn April 2nd, 2025 a number of citizenships are missing in the SPARQL endpoint of Wikidata as wdt:P27 properties but they are present in the statements: cf. following example\n\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### test a specific person\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n\n\nSELECT ?item ?o ?p ?statement_o\n    {\n\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n            {\n                 \n                BIND(<http://www.wikidata.org/entity/Q1001072> as ?item)\n                {\n                    ?item ?p ?statement_o.\n                    FILTER(contains(str(?p), 'P27'))\n                }\n                OPTIONAL{\n                    ?item wdt:P27 ?o.\n                }\n\n            }\n                \n        }",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Get the country value\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX p: <http://www.wikidata.org/prop/>\nPREFIX ps: <http://www.wikidata.org/prop/statement/>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\n\n\nSELECT ?item ?os ?osLabel\n\nWHERE\n    {\n\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n        {\n            {\n\n                BIND(<http://www.wikidata.org/entity/Q1001072> as ?item)\n                ?item p:P27 [ps:P27 ?os]\n\n                BIND(?osLabel AS ?osLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". }\n            }        \n                \n        }\n    }",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Get the country value\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX p: <http://www.wikidata.org/prop/>\nPREFIX ps: <http://www.wikidata.org/prop/statement/>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\n\n\nSELECT ?item ?os ?osLabel\n\nWHERE\n    {\n\n        {SELECT ?item\n        WHERE \n                {?item a wd:Q5.\n                MINUS {\n                        ?item wdt:P27 ?country   .\n                    }  \n        }\n                \n        ORDER BY ?item  \n       \n        }\n\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n        {\n            {\n\n                ?item p:P27 [ps:P27 ?os]\n\n                BIND(?osLabel AS ?osLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". }\n            }        \n                \n        }\n    }\n    LIMIT 20",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "### Conslusion about missing citizenships\n\nApparently, there are only five persons with this special situation, all other around 8700 are missing, as a quick inspection shows.\n\nThey will be excluded from the analysis",
     "metadata": {}
   },
   {
@@ -50,7 +140,13 @@
   {
     "kind": 2,
     "language": "sparql",
-    "value": "### Basic query about persons' properties\n\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?p ?label (COUNT(*) as ?n)\nWHERE {\n    GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>\n        {?s a wd:Q5;\n            ?p ?o.\n        OPTIONAL {?p rdfs:label ?label}    \n          }\n}\nGROUP BY ?p ?label\nORDER BY DESC(?n)",
+    "value": "### Basic query about persons' properties\n\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?p ?label (COUNT(*) as ?n)\nWHERE {\n    GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n        {?s a wd:Q5;\n            ?p ?o.\n        OPTIONAL {?p rdfs:label ?label}    \n          }\n}\nGROUP BY ?p ?label\nORDER BY DESC(?n)",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "#corrigé \n\n### Enhanced query about persons' properties (with P31 included)\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?p ?label (COUNT(*) as ?n)\nWHERE {\n    GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md> {\n        # Persons declared either by rdf:type or wdt:P31\n        { ?s a wd:Q5 }    # RDF type declaration\n        UNION\n        { ?s wdt:P31 wd:Q5 }  # Wikidata standard declaration\n        \n        # Get all properties of these persons\n        ?s ?p ?o .\n        \n        # Optional property label\n        OPTIONAL { \n            ?p rdfs:label ?label \n            FILTER(LANG(?label) = \"en\" || LANG(?label) = \"fr\" || LANG(?label) = \"\")\n        }\n    }\n}\nGROUP BY ?p ?label\nORDER BY DESC(?n)",
     "metadata": {}
   },
   {
@@ -62,19 +158,19 @@
   {
     "kind": 2,
     "language": "sparql",
-    "value": "### Get the labels of the countries or citizenships\n# Prepare the insert\n\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nCONSTRUCT  {\n    ?citizenship rdfs:label ?citizenshipLabel.\n}\n#SELECT DISTINCT ?citizenship ?citizenshipLabel\nWHERE {\n\n    {\n    SELECT DISTINCT ?citizenship\n    WHERE {\n        GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>\n            {\n                ?s wdt:P27 ?citizenship.\n            }\n            }\n    LIMIT 5\n    }\n\n    SERVICE <https://query.wikidata.org/sparql>\n                {\n                BIND (?citizenship as ?citizenship)\n                BIND (?citizenshipLabel as ?citizenshipLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n                }\n\n\n\n}",
+    "value": "### Get the labels of the countries \n# Prepare the insert\n\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nCONSTRUCT  {\n    ?country rdfs:label ?countryLabel.\n}\n#SELECT DISTINCT ?country ?countryLabel\nWHERE {\n\n    {\n    SELECT DISTINCT ?country\n    WHERE {\n        GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n            {\n                ?s wdt:P27 ?country.\n            }\n            }\n    LIMIT 5\n    }\n\n    SERVICE <https://query.wikidata.org/sparql>\n                {\n                BIND (?country as ?country)\n                BIND (?countryLabel as ?countryLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n                }\n\n\n\n}",
     "metadata": {}
   },
   {
     "kind": 2,
     "language": "sparql",
-    "value": "### Execute the INSERT, from the sparqlbook or on Allegrograph\n\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nWITH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md> \nINSERT  {\n    ?citizenship rdfs:label ?citizenshipLabel.\n}\nWHERE {\n\n    {\n    SELECT DISTINCT ?citizenship\n    WHERE {\n            {\n                ?s wdt:P27 ?citizenship.\n            }\n          }\n    }\n\n    SERVICE <https://query.wikidata.org/sparql>\n                {\n                BIND (?citizenship as ?citizenship)\n                BIND (?citizenshipLabel as ?citizenshipLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n                }\n\n\n\n}",
+    "value": "### Execute the INSERT, from the sparqlbook or on Allegrograph\n\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nWITH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md> \nINSERT  {\n    ?citizenship rdfs:label ?citizenshipLabel.\n}\nWHERE {\n\n    {\n    SELECT DISTINCT ?citizenship\n    WHERE {\n            {\n                ?s wdt:P27 ?citizenship.\n            }\n          }\n    }\n\n    SERVICE <https://query.wikidata.org/sparql>\n                {\n                BIND (?citizenship as ?citizenship)\n                BIND (?citizenshipLabel as ?citizenshipLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n                }\n\n\n\n}",
     "metadata": {}
   },
   {
     "kind": 2,
     "language": "sparql",
-    "value": "###  Inspect the citizenships\n# number of persons having this citizenship\n\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\n\nSELECT ?citizenship ?citizenshipLabel (COUNT(*) as ?n)\nWHERE {\nGRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>\n{\n   ?s wdt:P27 ?citizenship.\n   ?citizenship rdfs:label ?citizenshipLabel.\n}\n\n}\nGROUP BY ?citizenship ?citizenshipLabel\nORDER BY DESC(?n)\nlimit 20",
+    "value": "###  Inspect the citizenships\n# number of persons having this citizenship\n\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\n\nSELECT ?citizenship ?citizenshipLabel (COUNT(*) as ?n)\nWHERE {\nGRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n{\n   ?s wdt:P27 ?citizenship.\n   ?citizenship rdfs:label ?citizenshipLabel.\n}\n\n}\nGROUP BY ?citizenship ?citizenshipLabel\nORDER BY DESC(?n)\nlimit 20",
     "metadata": {}
   },
   {
@@ -86,19 +182,19 @@
   {
     "kind": 2,
     "language": "sparql",
-    "value": "###  Inspect the countries:\n# number of different countries\n\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nSELECT (COUNT(*) as ?n)\nWHERE\n   {\n   SELECT DISTINCT ?country\n   WHERE {\n      GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>\n         {\n            ?s wdt:P27 ?country.\n         }\n      }\n   }",
+    "value": "###  Inspect the countries:\n# number of different countries\n\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nSELECT (COUNT(*) as ?n)\nWHERE\n   {\n   SELECT DISTINCT ?country\n   WHERE {\n      GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n         {\n            ?s wdt:P27 ?country.\n         }\n      }\n   }",
     "metadata": {}
   },
   {
     "kind": 2,
     "language": "sparql",
-    "value": "### Insert the class 'country' for all countries\n# Please note that strictly speaking Wikidata has no ontology,\n# therefore no classes. We add this for our convenience\n\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nWITH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>\nINSERT {\n   ?country rdf:type wd:Q6256.\n}\nWHERE\n   {\n   SELECT DISTINCT ?country\n   WHERE {\n         {\n            ?s wdt:P27 ?country.\n         }\n      }\n   }",
+    "value": "### Insert the class 'country' for all countries\n# Please note that strictly speaking Wikidata has no ontology,\n# therefore no classes. We add this for our convenience\n\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nWITH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\nINSERT {\n   ?country rdf:type wd:Q6256.\n}\nWHERE\n   {\n   SELECT DISTINCT ?country\n   WHERE {\n         {\n            ?s wdt:P27 ?country.\n         }\n      }\n   }",
     "metadata": {}
   },
   {
     "kind": 2,
     "language": "sparql",
-    "value": "### Ajouter le label pour le concept Country\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\nINSERT DATA {\nGRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>\n    {    wd:Q6256 rdfs:label \"Country\".\n    }    \n}\n\n",
+    "value": "### Ajouter le label pour le concept Country\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\nINSERT DATA {\nGRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n    {    wd:Q6256 rdfs:label \"Country\".\n    }    \n}\n\n",
     "metadata": {}
   },
   {
@@ -110,13 +206,13 @@
   {
     "kind": 2,
     "language": "sparql",
-    "value": "### Persons with more than one citizenship\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\n\nSELECT ?item (COUNT(*) as ?n) ( GROUP_CONCAT(?citizenshipLabel; separator=\", \") AS ?countries )\nWHERE {\nGRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>\n{\n   ?item wdt:P27 ?citizenship.\n    ?citizenship rdfs:label ?citizenshipLabel.\n}\n\n}\nGROUP BY ?item\nHAVING (?n > 1)\nORDER BY DESC(?n)\nOFFSET 10\nLIMIT 5",
+    "value": "### Persons with more than one citizenship\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\n\nSELECT ?item (COUNT(*) as ?n) ( GROUP_CONCAT(?citizenshipLabel; separator=\", \") AS ?countries )\nWHERE {\nGRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n{\n   ?item wdt:P27 ?citizenship.\n    ?citizenship rdfs:label ?citizenshipLabel.\n}\n\n}\nGROUP BY ?item\nHAVING (?n > 1)\nORDER BY DESC(?n)\nOFFSET 10\nLIMIT 5",
     "metadata": {}
   },
   {
     "kind": 2,
     "language": "sparql",
-    "value": "### Number of persons with more than one citizenship\n# We see that we have an issue: 1/5 of population with more than one citizenship\n# How to treat this ?\n\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nSELECT (COUNT(*) AS ?no)\nWHERE {\n    SELECT ?item (COUNT(*) as ?n)\n    WHERE {\n    GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>\n    {\n    ?item wdt:P27 ?citizenship.\n        ?citizenship rdfs:label ?citizenshipLabel.\n    }\n\n    }\n    GROUP BY ?item\n    HAVING (?n > 1)\n}",
+    "value": "### Number of persons with more than one citizenship -> 151 personne le 7 avril 2025\n# How to treat this ?\n\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nSELECT (COUNT(*) AS ?no)\nWHERE {\n    SELECT ?item (COUNT(*) as ?n)\n    WHERE {\n    GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n    {\n    ?item wdt:P27 ?citizenship.\n        ?citizenship rdfs:label ?citizenshipLabel.\n    }\n\n    }\n    GROUP BY ?item\n    HAVING (?n > 1)\n}",
     "metadata": {}
   },
   {
@@ -128,19 +224,19 @@
   {
     "kind": 2,
     "language": "sparql",
-    "value": "### Get the continents — prepare the data\n\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nCONSTRUCT  {\n    ?citizenship wdt:P30 ?continent.\n    ?continent rdfs:label ?continentLabel.\n}\n#SELECT DISTINCT ?citizenship ?citizenshipLabel\nWHERE {\n\n    {\n    SELECT DISTINCT ?citizenship\n    WHERE {\n        GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>\n            {\n                ?s wdt:P27 ?citizenship.\n            }\n            }\n    LIMIT 5\n    }\n\n    SERVICE <https://query.wikidata.org/sparql>\n                {\n\n                ?citizenship wdt:P30 ?continent.\n                # BIND (?continent as ?citizenship)\n                BIND (?continentLabel as ?continentLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n                }\n\n\n\n}\n",
+    "value": "### Get the continents — prepare the data\n\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nCONSTRUCT  {\n    ?citizenship wdt:P30 ?continent.\n    ?continent rdfs:label ?continentLabel.\n}\n#SELECT DISTINCT ?citizenship ?citizenshipLabel\nWHERE {\n\n    {\n    SELECT DISTINCT ?citizenship\n    WHERE {\n        GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n            {\n                ?s wdt:P27 ?citizenship.\n            }\n            }\n    LIMIT 5\n    }\n\n    SERVICE <https://query.wikidata.org/sparql>\n                {\n\n                ?citizenship wdt:P30 ?continent.\n                # BIND (?continent as ?citizenship)\n                BIND (?continentLabel as ?continentLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n                }\n\n\n\n}\n",
     "metadata": {}
   },
   {
     "kind": 2,
     "language": "sparql",
-    "value": "### Get the labels of the countries or citizenships\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nWITH  <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>   \nINSERT  {\n    ?citizenship wdt:P30 ?continent.\n    ?continent rdfs:label ?continentLabel.\n}\n#SELECT DISTINCT ?citizenship ?citizenshipLabel\nWHERE {\n\n    {\n    SELECT DISTINCT ?citizenship\n    WHERE {\n            {\n                ?s wdt:P27 ?citizenship.\n            }\n            }\n    }\n\n    SERVICE <https://query.wikidata.org/sparql>\n                {\n\n                ?citizenship wdt:P30 ?continent.\n                # BIND (?continent as ?citizenship)\n                BIND (?continentLabel as ?continentLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n                }\n\n\n\n}\n",
+    "value": "### Get the labels of the countries or citizenships\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nWITH  <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>   \nINSERT  {\n    ?citizenship wdt:P30 ?continent.\n    ?continent rdfs:label ?continentLabel.\n}\n#SELECT DISTINCT ?citizenship ?citizenshipLabel\nWHERE {\n\n    {\n    SELECT DISTINCT ?citizenship\n    WHERE {\n            {\n                ?s wdt:P27 ?citizenship.\n            }\n            }\n    }\n\n    SERVICE <https://query.wikidata.org/sparql>\n                {\n\n                ?citizenship wdt:P30 ?continent.\n                # BIND (?continent as ?citizenship)\n                BIND (?continentLabel as ?continentLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n                }\n\n\n\n}\n",
     "metadata": {}
   },
   {
     "kind": 2,
     "language": "sparql",
-    "value": "### Insert the property label\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\n\nINSERT DATA {\n  GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>\n  {wdt:P30 rdfs:label 'continent'.}\n}",
+    "value": "### Insert the property label\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\n\nINSERT DATA {\n  GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n  {wdt:P30 rdfs:label 'continent'.}\n}",
     "metadata": {}
   },
   {
@@ -152,19 +248,19 @@
   {
     "kind": 2,
     "language": "sparql",
-    "value": "###  Inspect the continents:\n# number of different continents\n\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nSELECT (COUNT(*) as ?n)\nWHERE\n   {\n   SELECT DISTINCT ?continent\n   WHERE {\n      GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>\n         {\n            ?s wdt:P30 ?continent.\n         }\n      }\n   }",
+    "value": "###  Inspect the continents:\n# number of different continents -> 9 au 7 avril\n\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nSELECT (COUNT(*) as ?n)\nWHERE\n   {\n   SELECT DISTINCT ?continent\n   WHERE {\n      GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n         {\n            ?s wdt:P30 ?continent.\n         }\n      }\n   }",
     "metadata": {}
   },
   {
     "kind": 2,
     "language": "sparql",
-    "value": "### Insert the class 'continent' for all continents\n# Please note that strictly speaking Wikidata has no ontology,\n# therefore no classes. We add this for our convenience\n\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nWITH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>\nINSERT {\n   ?continent rdf:type wd:Q5107.\n}\nWHERE\n   {\n   SELECT DISTINCT ?continent\n   WHERE {\n         {\n            ?s wdt:P30 ?continent.\n         }\n      }\n   }",
+    "value": "### Insert the class 'continent' for all continents\n# Please note that strictly speaking Wikidata has no ontology,\n# therefore no classes. We add this for our convenience\n\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nWITH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\nINSERT {\n   ?continent rdf:type wd:Q5107.\n}\nWHERE\n   {\n   SELECT DISTINCT ?continent\n   WHERE {\n         {\n            ?s wdt:P30 ?continent.\n         }\n      }\n   }",
     "metadata": {}
   },
   {
     "kind": 2,
     "language": "sparql",
-    "value": "### Ajouter le label pour la classe \"Continent\"\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\nINSERT DATA {\nGRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>\n    {    wd:Q5107 rdfs:label \"Continent\".\n    }    \n}\n\n",
+    "value": "### Ajouter le label pour la classe \"Continent\"\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\nINSERT DATA {\nGRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n    {    wd:Q5107 rdfs:label \"Continent\".\n    }    \n}\n\n",
     "metadata": {}
   },
   {
@@ -176,25 +272,31 @@
   {
     "kind": 2,
     "language": "sparql",
-    "value": "###  Inspect the persons in continents\n# number of persons having this citizenship\n\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\n\nSELECT ?continent ?continentLabel (COUNT(*) as ?n)\nWHERE {\nGRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>\n{\n   ?s wdt:P27 ?country.\n   ?country wdt:P30 ?continent.\n   ?continent rdfs:label ?continentLabel.\n}\n\n}\nGROUP BY ?continent ?continentLabel\nORDER BY DESC(?n)\n",
+    "value": "###  Inspect the persons in continents\n# number of persons having this citizenship\n\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\n\nSELECT ?continent ?continentLabel (COUNT(*) as ?n)\nWHERE {\nGRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n{\n   ?s wdt:P27 ?country.\n   ?country wdt:P30 ?continent.\n   ?continent rdfs:label ?continentLabel.\n}\n\n}\nGROUP BY ?continent ?continentLabel\nORDER BY DESC(?n)\n",
     "metadata": {}
   },
   {
     "kind": 2,
     "language": "sparql",
-    "value": "### Persons with more than one citizenship\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\n\nSELECT ?item (COUNT(*) as ?n) ( GROUP_CONCAT(?continentLabel; separator=\", \") AS ?continents )\n    ( GROUP_CONCAT(?countryLabel; separator=\", \") AS ?countries )\nWHERE {\n    SELECT DISTINCT ?item ?continentLabel ?coutryLabel\n    WHERE \n        {\n        GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>\n            {\n            ?item wdt:P27 ?country.\n            ?country wdt:P30 ?continent;\n                rdfs:label ?countryLabel.\n            ?continent rdfs:label ?continentLabel.\n            ## Excluding Eurasia, Australia and Oceania insular\n            FILTER ( ?continent NOT IN (wd:Q538, wd:Q3960, wd:Q5401))\n            }\n        }\n}\nGROUP BY ?item\n#HAVING (?n > 1)\nORDER BY DESC(?n)\n#OFFSET 10\nLIMIT 10",
+    "value": "### Persons with more than one citizenship\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\n\nSELECT ?item (COUNT(*) as ?n) ( GROUP_CONCAT(?continentLabel; separator=\", \") AS ?continents )\n    ( GROUP_CONCAT(?countryLabel; separator=\", \") AS ?countries )\nWHERE {\n    SELECT DISTINCT ?item ?continentLabel ?coutryLabel\n    WHERE \n        {\n        GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n            {\n            ?item wdt:P27 ?country.\n            ?country wdt:P30 ?continent;\n                rdfs:label ?countryLabel.\n            ?continent rdfs:label ?continentLabel.\n            ## Excluding Eurasia, Australia and Oceania insular\n            FILTER ( ?continent NOT IN (wd:Q538, wd:Q3960, wd:Q5401))\n            }\n        }\n}\nGROUP BY ?item\n#HAVING (?n > 1)\nORDER BY DESC(?n)\n#OFFSET 10\nLIMIT 10",
     "metadata": {}
   },
   {
     "kind": 2,
     "language": "sparql",
-    "value": "### Persons with more than one citizenship\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\n\nSELECT ?item (COUNT(*) as ?n) \n            ( GROUP_CONCAT(?continentLabel; separator=\", \") AS ?continents )\n#            ( GROUP_CONCAT(?countryLabel; separator=\", \") AS ?countries )\nWHERE {\n    SELECT DISTINCT ?item \n    ?continentLabel \n    # ?countryLabel\n    WHERE \n        {\n        GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>\n            {\n            ?item wdt:P27 ?country.\n            ?country wdt:P30 ?continent;\n                rdfs:label ?countryLabel.\n            ?continent rdfs:label ?continentLabel.\n            ## Excluding Eurasia, Australia and Oceania insular\n            FILTER ( ?continent NOT IN (wd:Q538, wd:Q3960, wd:Q5401))\n            }\n        }\n}\nGROUP BY ?item\nHAVING (?n > 1)\nORDER BY DESC(?n)\n#OFFSET 10\nLIMIT 10",
+    "value": "#corrigé \n### Persons with multiple citizenships (corrected version)\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?person ?personLabel \n       (COUNT(DISTINCT ?country) AS ?nationalityCount)\n       (GROUP_CONCAT(DISTINCT ?countryLabel; separator=\" | \") AS ?nationalities)\n       (GROUP_CONCAT(DISTINCT ?continentLabel; separator=\" | \") AS ?continents)\nWHERE {\n  GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md> {\n    # Identification des personnes (deux méthodes)\n    { ?person a wd:Q5 } UNION { ?person wdt:P31 wd:Q5 }\n    \n    # Nationalités et continents\n    ?person wdt:P27 ?country .\n    ?country wdt:P30 ?continent ;\n             rdfs:label ?countryLabel .\n    ?continent rdfs:label ?continentLabel .\n    \n    # Filtre des continents\n    FILTER (?continent NOT IN (wd:Q538, wd:Q3960, wd:Q5401))\n    \n    # Libellés des personnes\n    OPTIONAL { ?person rdfs:label ?personLabel \n               FILTER(LANG(?personLabel) = \"fr\" || LANG(?personLabel) = \"en\") }\n  }\n}\nGROUP BY ?person ?personLabel\nHAVING (COUNT(DISTINCT ?country) > 1)  # Au moins 2 nationalités différentes\nORDER BY DESC(?nationalityCount)\nLIMIT 10",
     "metadata": {}
   },
   {
     "kind": 2,
     "language": "sparql",
-    "value": "### Number of persons with more than one citizenship\n# We see that we have an issue: 1/5 of population with more than one citizenship\n# How to treat this ?\n\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nSELECT (COUNT(*) AS ?no)\nWHERE {\n    SELECT ?item (COUNT(*) as ?n) ( GROUP_CONCAT(?continentLabel; separator=\", \") AS ?continents )\n    WHERE {\n        SELECT DISTINCT ?item ?continentLabel\n        WHERE \n            {\n            GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>\n                {\n                ?item wdt:P27 ?country.\n                ?country wdt:P30 ?continent.\n                ?continent rdfs:label ?continentLabel.\n                ## Excluding Eurasia, Australia and Oceania insular\n                FILTER ( ?continent NOT IN (wd:Q538, wd:Q3960, wd:Q5401))\n                }\n            }\n    }\n    GROUP BY ?item\n    HAVING (?n > 1)\n}",
+    "value": "### Persons with more than one citizenship\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\n\nSELECT ?item (COUNT(*) as ?n) \n            ( GROUP_CONCAT(?continentLabel; separator=\", \") AS ?continents )\n#            ( GROUP_CONCAT(?countryLabel; separator=\", \") AS ?countries )\nWHERE {\n    SELECT DISTINCT ?item \n    ?continentLabel \n    # ?countryLabel\n    WHERE \n        {\n        GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n            {\n            ?item wdt:P27 ?country.\n            ?country wdt:P30 ?continent;\n                rdfs:label ?countryLabel.\n            ?continent rdfs:label ?continentLabel.\n            ## Excluding Eurasia, Australia and Oceania insular\n            FILTER ( ?continent NOT IN (wd:Q538, wd:Q3960, wd:Q5401))\n            }\n        }\n}\nGROUP BY ?item\nHAVING (?n > 1)\nORDER BY DESC(?n)\n#OFFSET 10\nLIMIT 10",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Number of persons with more than one citizenship -> 159 au 7 avril 2025\n# How to treat this ?\n\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nSELECT (COUNT(*) AS ?no)\nWHERE {\n    SELECT ?item (COUNT(*) as ?n) ( GROUP_CONCAT(?continentLabel; separator=\", \") AS ?continents )\n    WHERE {\n        SELECT DISTINCT ?item ?continentLabel\n        WHERE \n            {\n            GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n                {\n                ?item wdt:P27 ?country.\n                ?country wdt:P30 ?continent.\n                ?continent rdfs:label ?continentLabel.\n                ## Excluding Eurasia, Australia and Oceania insular\n                FILTER ( ?continent NOT IN (wd:Q538, wd:Q3960, wd:Q5401))\n                }\n            }\n    }\n    GROUP BY ?item\n    HAVING (?n > 1)\n}",
     "metadata": {}
   }
 ]
