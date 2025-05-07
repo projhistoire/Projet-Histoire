@@ -1,0 +1,404 @@
+[
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "# Import employers / merberships / educational organizations\n\n\nIn this notebook we import three kind of relationships of our population to organisations: organisations where they are educated, employed and members ",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "#corrigé\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nSELECT (COUNT(*) as ?n)\nWHERE {\n  GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md> {\n    ?s <http://www.wikidata.org/prop/direct/P31> wd:Q5.\n  }\n}",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Number of persons \nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nSELECT (COUNT(*) as ?n)\nWHERE {\n    GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n        {?s a wd:Q5.}\n}\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "PREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nSELECT ?s ?label ?birthYear\nWHERE {\n    GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n        {?s a wd:Q5;\n            rdfs:label ?label;\n            wdt:P569 ?birthYear}\n}\nORDER BY ?s\nLIMIT 3\n",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?s ?label ?birthYear\nWHERE {\n  GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md> {\n    ?s wdt:P31 wd:Q5;\n       rdfs:label ?label;\n       wdt:P569 ?birthYear.\n  }\n}\nORDER BY ?s\nLIMIT 3",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## Memberships ",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "#corrigé \n\n## Explore memberships\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nSELECT ?item ?birthYear ?organisation ?organisationLabel \nWHERE {\n  GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md> {\n  \n    ## Find the persons in the imported graph\n    {\n      SELECT ?item ?birthYear\n      WHERE {\n        ?item wdt:P31 wd:Q5;\n              wdt:P569 ?birthYear.\n      }\n      ORDER BY ?item      \n      OFFSET 0\n      #OFFSET 10000\n      #OFFSET 20000\n      LIMIT 100\n    }\n\n    ## Lookup organisational membership in Wikidata\n    SERVICE <https://query.wikidata.org/sparql> {\n      ?item wdt:P463 ?organisation.\n      SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". }\n    }\n  }\n}\nORDER BY ?item ?organisation\nLIMIT 20\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "## Explore memberships\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nSELECT ?item ?birthYear ?organisation ?organisationLabel \nWHERE\n    {\n         GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n   \n        ## Find the persons in the imported graph\n        {SELECT ?item ?birthYear\n        WHERE \n                {?item a wd:Q5;\n                    wdt:P569 ?birthYear}\n        ORDER BY ?item      \n        OFFSET 0\n        #OFFSET 10000\n        #OFFSET 20000\n       LIMIT 100\n\n        }\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n            {\n                # member of\n                ?item wdt:P463 ?organisation.\n                BIND (?organisationLabel as ?organisationLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n            }\n                \n        }\nORDER BY ?item ?organisation\nlimit 20\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "#corrigé \n\n## Group and count\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nSELECT ?organisation ?organisationLabel (COUNT(*) as ?n)\nWHERE {\n  GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md> {\n\n    ## Find the persons in the imported graph\n    {\n      SELECT ?item\n      WHERE {\n        ?item wdt:P31 wd:Q5.\n      }\n      ORDER BY ?item      \n      OFFSET 0\n      LIMIT 10000\n    }\n\n    ## Query Wikidata for the organisational memberships\n    SERVICE <https://query.wikidata.org/sparql> {\n      ?item wdt:P463 ?organisation.\n      SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". }\n    }\n  }\n}\nGROUP BY ?organisation ?organisationLabel\nORDER BY DESC(?n)\nLIMIT 5\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "## Group and count\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nSELECT ?organisation ?organisationLabel (COUNT(*) as ?n)\nWHERE\n    {\n        GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n\n        ## Find the persons in the imported graph\n        {SELECT ?item\n        WHERE \n                {?item a wd:Q5.}\n        ORDER BY ?item      \n        OFFSET 0\n        #OFFSET 10000\n        #OFFSET 20000\n       LIMIT 10000\n\n        }\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n            {\n                # member of\n                ?item wdt:P463 ?organisation.\n                BIND (?organisationLabel as ?organisationLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n            }\n                \n        }\nGROUP BY ?organisation ?organisationLabel\nORDER BY DESC(?n)\nLIMIT 5\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "#corrigé \n\n### Are some persons at the same time members and employees of the same organisation?\n# Very few cases  \n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nSELECT ?item ?itemLabel ?organisation ?organisationLabel (COUNT(*) as ?n)\nWHERE {\n    GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md> {\n\n        ## Find the persons in the imported graph (using P31 to identify persons)\n        {SELECT ?item ?itemLabel\n        WHERE {\n            ?item wdt:P31 wd:Q5;  ## Specify that ?item is a person (wd:Q5)\n            rdfs:label ?itemLabel.\n        }\n        ORDER BY ?item      \n        OFFSET 0\n        LIMIT 10000\n        }\n\n        ## Query Wikidata for the organisational memberships and employers\n        SERVICE <https://query.wikidata.org/sparql> {\n            # member of\n            ?item wdt:P463 ?organisation.\n            # employer\n            ?item wdt:P108 ?organisation.\n            BIND (?organisationLabel as ?organisationLabel)\n            SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". }\n        }\n    }\n}\nGROUP BY ?item ?itemLabel ?organisation ?organisationLabel\nORDER BY DESC(?n)\nLIMIT 20\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Are some persons at the same time members and employees of the same organisation?\n# Very few cases  \n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nSELECT ?item ?itemLabel  ?organisation ?organisationLabel (COUNT(*) as ?n)\nWHERE\n    {\n        GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n\n        ## Find the persons in the imported graph\n        {SELECT ?item ?itemLabel\n        WHERE \n                {?item a wd:Q5;\n                      rdfs:label ?itemLabel}\n        ORDER BY ?item      \n        OFFSET 0\n        #OFFSET 10000\n        #OFFSET 20000\n       LIMIT 10000\n\n        }\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n            {\n                # member of\n                ?item wdt:P463 ?organisation.\n                # employer\n                ?item wdt:P108 ?organisation.\n                BIND (?organisationLabel as ?organisationLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n            }\n                \n        }\nGROUP BY ?item ?itemLabel ?organisation ?organisationLabel\nORDER BY DESC(?n)\nLIMIT 20\n",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "### Employer",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "#corrigé\n\n## Group and count - Adapted to use P31 for persons\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nSELECT ?organisation ?organisationLabel (COUNT(*) as ?n)\nWHERE {\n    GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md> {\n        \n        ## Find the persons in the imported graph (using P31 to identify persons)\n        {SELECT ?item\n        WHERE {\n            ?item wdt:P31 wd:Q5.  ## Specify that ?item is a person (wd:Q5)\n        }\n        ORDER BY ?item      \n        OFFSET 0\n        LIMIT 10000\n        }\n\n        ## Query Wikidata for the employer (P108) relationship and the organisation labels\n        SERVICE <https://query.wikidata.org/sparql> {\n            ?item wdt:P108 ?organisation.  ## Find the employer (P108)\n            BIND (?organisationLabel as ?organisationLabel)\n            SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n        }\n    }\n}\nGROUP BY ?organisation ?organisationLabel\nORDER BY DESC(?n)\nLIMIT 5\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "## Group and count\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nSELECT ?organisation ?organisationLabel (COUNT(*) as ?n)\nWHERE\n    {\n        GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n\n        ## Find the persons in the imported graph\n        {SELECT ?item\n        WHERE \n                {?item a wd:Q5.}\n        ORDER BY ?item      \n        OFFSET 0\n        #OFFSET 10000\n        #OFFSET 20000\n       LIMIT 10000\n\n        }\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n            {\n                # employer\n                ?item wdt:P108 ?organisation.\n                BIND (?organisationLabel as ?organisationLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n            }\n                \n        }\nGROUP BY ?organisation ?organisationLabel\nORDER BY DESC(?n)\nLIMIT 5\n",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "### Import data: employer",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "#corrigé \n\n### Prepare the data to be imported\n# With LIMIT clause \n## Apparently labels are not repeated if already available\n# We therefore can integrate them directly in the INSERT below\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nCONSTRUCT {\n    ?item wdt:P108 ?organisation.\n    ?organisation rdfs:label ?organisationLabel\n}\nWHERE {\n    ## Find the persons in the imported graph (using P31 to identify persons)\n    {SELECT ?item\n    WHERE {\n        ?item wdt:P31 wd:Q5.  ## Specify that ?item is a person (wd:Q5)\n    }\n    ORDER BY ?item      \n    OFFSET 0\n    LIMIT 10\n    }\n\n    ## Query Wikidata for the employer (P108) relationship and the organisation labels\n    SERVICE <https://query.wikidata.org/sparql> {\n        # employer (P108)\n        ?item wdt:P108 ?organisation.\n        BIND (?organisationLabel as ?organisationLabel)\n        SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". }\n    }\n}\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Prepare the data to be imported\n# With LIMIT clause \n## Apparently labels are not repeated if already available\n# We therefore car integrate them directly in the INSERT below\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nCONSTRUCT {?item wdt:P108 ?organisation.\n            ?organisation rdfs:label ?organisationLabel}\nWHERE\n    {\n        ## Find the persons in the imported graph\n        {SELECT ?item\n        WHERE \n                {?item a wd:Q5.}\n        ORDER BY ?item      \n        OFFSET 0\n        #OFFSET 10000\n        #OFFSET 20000\n        LIMIT 10\n\n        }\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n            {\n                # employer\n                ?item wdt:P108 ?organisation.\n                BIND (?organisationLabel as ?organisationLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n            }\n                \n        }",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "#corrigé \n\n### This insert query has to be carried out directly on the Allegrograph server\n## Also, you have to carry it out in three steps. The accepted limit by Wikidata \n## of instances in a variable ('item' in our case) appears to be 10000.\n## You therefore have to have three steps for a population of around 23000 persons  \n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nWITH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\nINSERT {?item wdt:P108 ?organisation.\n         ?organisation rdfs:label ?organisationLabel}\nWHERE\n    {\n        ## Find the persons in the imported graph (using P31 to specify persons)\n        {SELECT ?item\n        WHERE \n                {?item wdt:P31 wd:Q5.}  ## Specify that ?item is a person (P31 wd:Q5)\n        ORDER BY ?item      \n        #OFFSET 10000\n        #OFFSET 20000\n        OFFSET 30000  ## Adjust the OFFSET for each step (you can modify it for other steps)\n        LIMIT 10000  ## You can modify LIMIT to get the correct number of persons per step\n\n        }\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n            {\n                # employer\n                ?item wdt:P108 ?organisation.\n                BIND (?organisationLabel as ?organisationLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n            }\n                \n        }\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### This insert query has to be carried out directly on the Allegrograph server\n## Also, you have to carry it out in three steps. The accepted limit by Wikidata \n## of instances in a variable ('item' in our case) appears to be 10000.\n## You therefore have to have three steps for a population of around 23000 persons  \n\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nWITH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\nINSERT {?item wdt:P108 ?organisation.\n         ?organisation rdfs:label ?organisationLabel}\nWHERE\n    {\n        ## Find the persons in the imported graph\n        {SELECT ?item\n        WHERE \n                {?item a wd:Q5.}\n        ORDER BY ?item      \n        #OFFSET 10000\n        #OFFSET 20000\n        OFFSET 30000\n        LIMIT 10000\n\n        }\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n            {\n                # employer\n                ?item wdt:P108 ?organisation.\n                BIND (?organisationLabel as ?organisationLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n            }\n                \n        }        ",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "#### Inspect imported information",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Basic query about number of persons per employers\n\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?organisation ?organisationLabel (COUNT(*) as ?n)\nWHERE {\n    GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n        {?item wdt:P108 ?organisation.\n         ?organisation rdfs:label ?organisationLabel\n         }    \n          \n}\nGROUP BY ?organisation ?organisationLabel \nORDER BY DESC(?n)\nLIMIT 5\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Number of organisations\n\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT (COUNT(*) as ?n)\nWHERE {\n        SELECT DISTINCT ?organisation ?organisationLabel \nWHERE {\n    GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n        {?item wdt:P108 ?organisation.\n         ?organisation rdfs:label ?organisationLabel\n         }    \n          \n    }\n\n}\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Insert the label of the property\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\n\nINSERT DATA {\n  GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n  {wdt:P108 rdfs:label 'has employer'.}\n}",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "### Import data: membership",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Prepare the data to be imported\n# With LIMIT clause \n## Apparently labels are not repeated if already available\n# We therefore car integrate them directly in the INSERT below\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nCONSTRUCT {?item wdt:P463 ?organisation.\n            ?organisation rdfs:label ?organisationLabel}\nWHERE\n    {\n        ## Find the persons in the imported graph\n        {SELECT ?item\n        WHERE \n                {?item a wd:Q5.}\n        ORDER BY ?item      \n        OFFSET 0\n        #OFFSET 10000\n        #OFFSET 20000\n        LIMIT 10\n\n        }\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n            {\n                # member of\n                ?item wdt:P463 ?organisation.\n                BIND (?organisationLabel as ?organisationLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n            }\n                \n        }",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### This insert query has to be carried out directly on the Allegrograph server\n## Also, you have to carry it out in three steps. The accepted limit by Wikidata \n## of instances in a variable ('item' in our case) appears to be 10000.\n## You therefore have to have three steps for a population of around 23000 persons  \n\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nWITH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\nINSERT {?item wdt:P463 ?organisation.\n         ?organisation rdfs:label ?organisationLabel}\nWHERE\n    {\n        ## Find the persons in the imported graph\n        {SELECT ?item\n        WHERE \n                {?item a wd:Q5.}\n        ORDER BY ?item      \n        #OFFSET 10000\n        #OFFSET 20000\n        OFFSET 30000\n        LIMIT 10000\n\n        }\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n            {\n                # member of\n                ?item wdt:P463 ?organisation.\n                BIND (?organisationLabel as ?organisationLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n            }\n                \n        }        ",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "#### Inspect imported information",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Basic query about number of persons per employers\n\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?organisation ?organisationLabel (COUNT(*) as ?n)\nWHERE {\n    GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n        {?item wdt:P463 ?organisation.\n         ?organisation rdfs:label ?organisationLabel\n         }    \n          \n}\nGROUP BY ?organisation ?organisationLabel \nORDER BY DESC(?n)\nLIMIT 5\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Number of organisations\n\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT (COUNT(*) as ?n)\nWHERE {\n        SELECT DISTINCT ?organisation ?organisationLabel \nWHERE {\n    GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n        {?item wdt:P463 ?organisation.\n         ?organisation rdfs:label ?organisationLabel\n         }    \n          \n    }\n\n}\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Insert the label of the property\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\n\nINSERT DATA {\n  GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n  {wdt:P463 rdfs:label 'is member of'.}\n}",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "### Import data: educated at",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "#corrigé \n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nCONSTRUCT {\n    ?item wdt:P69 ?organisation.   # Relie la personne à l'organisation où elle a étudié\n    ?organisation rdfs:label ?organisationLabel  # Récupère l'étiquette de l'organisation\n}\nWHERE {\n    ## Trouver les personnes dans le graphe importé\n    {\n        SELECT ?item\n        WHERE {\n            ?item wdt:P31 wd:Q5.  # Filtre les éléments qui sont des instances de la classe 'personne' (Q5)\n        }\n        ORDER BY ?item\n        OFFSET 0\n        LIMIT 10\n    }\n\n    ## Obtenir les organisations et leurs étiquettes\n    SERVICE <https://query.wikidata.org/sparql> {\n        ?item wdt:P69 ?organisation.  # Lien entre la personne et l'organisation où elle a étudié\n        BIND (?organisationLabel as ?organisationLabel)\n        SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". }\n    }\n}\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Prepare the data to be imported\n# With LIMIT clause \n## Apparently labels are not repeated if already available\n# We therefore car integrate them directly in the INSERT below\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nCONSTRUCT {?item wdt:P69 ?organisation.\n            ?organisation rdfs:label ?organisationLabel}\nWHERE\n    {\n        ## Find the persons in the imported graph\n        {SELECT ?item\n        WHERE \n                {?item a wd:Q5.}\n        ORDER BY ?item      \n        OFFSET 0\n        #OFFSET 10000\n        #OFFSET 20000\n        LIMIT 10\n\n        }\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n            {\n                # educated at\n                ?item wdt:P69 ?organisation.\n                BIND (?organisationLabel as ?organisationLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n            }\n                \n        }",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "#corrigé \n\n### This insert query has to be carried out directly on the Allegrograph server\n## Also, you have to carry it out in three steps. The accepted limit by Wikidata \n## of instances in a variable ('item' in our case) appears to be 10000.\n## You therefore have to have three steps for a population of around 23000 persons  \n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nWITH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\nINSERT {\n    ?item wdt:P69 ?organisation.   # Relie la personne à l'organisation où elle a étudié\n    ?organisation rdfs:label ?organisationLabel  # Récupère l'étiquette de l'organisation\n}\nWHERE {\n    ## Trouver les personnes dans le graphe importé\n    {\n        SELECT ?item\n        WHERE {\n            ?item wdt:P31 wd:Q5.  # Filtrer les éléments qui sont des instances de la classe 'personne' (Q5)\n        }\n        ORDER BY ?item\n        OFFSET 30000  # Vous pouvez ajuster l'OFFSET pour chaque étape\n        LIMIT 10000\n    }\n\n    ## Obtenir les organisations et leurs étiquettes\n    SERVICE <https://query.wikidata.org/sparql> {\n        ?item wdt:P69 ?organisation.  # Lien entre la personne et l'organisation où elle a étudié\n        BIND (?organisationLabel as ?organisationLabel)\n        SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". }\n    }\n}\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### This insert query has to be carried out directly on the Allegrograph server\n## Also, you have to carry it out in three steps. The accepted limit by Wikidata \n## of instances in a variable ('item' in our case) appears to be 10000.\n## You therefore have to have three steps for a population of around 23000 persons  \n\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nWITH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\nINSERT {?item wdt:P69 ?organisation.\n         ?organisation rdfs:label ?organisationLabel}\nWHERE\n    {\n        ## Find the persons in the imported graph\n        {SELECT ?item\n        WHERE \n                {?item a wd:Q5.}\n        ORDER BY ?item      \n        #OFFSET 10000\n        #OFFSET 20000\n        OFFSET 30000\n        LIMIT 10000\n\n        }\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n            {\n                # educated at\n                ?item wdt:P69 ?organisation.\n                BIND (?organisationLabel as ?organisationLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n            }\n                \n        }        ",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "#### Inspect imported information",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Basic query about number of persons per employers\n\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?organisation ?organisationLabel (COUNT(*) as ?n)\nWHERE {\n    GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n        {?item wdt:P69 ?organisation.\n         ?organisation rdfs:label ?organisationLabel\n         }    \n          \n}\nGROUP BY ?organisation ?organisationLabel \nORDER BY DESC(?n)\nLIMIT 5\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Number of organisations\n\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT (COUNT(*) as ?n)\nWHERE {\n        SELECT DISTINCT ?organisation ?organisationLabel \nWHERE {\n    GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n        {?item wdt:P69 ?organisation.\n         ?organisation rdfs:label ?organisationLabel\n         }    \n          \n    }\n\n}\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Insert the label of the property\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\n\nINSERT DATA {\n  GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n  {wdt:P69 rdfs:label 'was educated at'.}\n}",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "### Add the Group class and inspect the Wikidata properties of organisations\n    \nWikidata does not provide a suitable class, we therefore use the CIDOC CRM E74 Group class which comprises all kinds of organisations:\n\nhttp://www.cidoc-crm.org/cidoc-crm/E74_Group\n\n\nWith the queries [in this sparqlbook](wdt_available_information.sparqlbook) you can inspect the available information in the whole repository",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "###  Inspect the organisations:\n# number of different organisations\n\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nSELECT (COUNT(*) as ?n)\nWHERE\n   {\n   SELECT DISTINCT ?organisation\n   WHERE {\n      GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n         {\n            ?s wdt:P108|wdt:P463|wdt:P69 ?organisation.\n         }\n      }\n   }",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Insert the class 'occupation' for all the occupations\n# Please note that strictly speaking Wikidata has no ontology,\n# therefore no classes. We add this for our convenience\n\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nWITH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\nINSERT {\n   ?organisation rdf:type <http://www.cidoc-crm.org/cidoc-crm/E74_Group>.\n}\nWHERE\n   {\n   SELECT DISTINCT ?organisation\n   WHERE {\n         {\n            ?s wdt:P108|wdt:P463|wdt:P69 ?organisation.\n         }\n      }\n   }",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Ajouter le label pour le concept Occupation\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\nINSERT DATA {\nGRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n    {    <http://www.cidoc-crm.org/cidoc-crm/E74_Group> rdfs:label \"Organisation\".\n    }    \n}\n\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "#### Inspect the available information in Wikidata\n\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Number of organisations\n\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>\n\nSELECT (COUNT(*) as ?n)\nWHERE {\n    GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n        {?item rdf:type crm:E74_Group.\n        OPTIONAL {?item rdfs:label ?itemLabel}    \n          }\n}\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Basic query about persons' occupation\n\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>\n\nSELECT (COUNT(*) as ?n)\nWHERE {\n    GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n        {?item rdf:type crm:E74_Group.\n        OPTIONAL {?item rdfs:label ?itemLabel}    \n          }\n}\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Wikidata properties of the first 3000 organisations\n\n# cf. the file: Wikidata/wdt_organisations_properties_20250502.csv\n\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\nSELECT ?p ?propLabel ?n\nWHERE {\n        {\n            SELECT ?p (COUNT(*) as ?n)\n            WHERE {\n                {SELECT DISTINCT ?item\n                WHERE {\n                        GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n                    {?item rdf:type crm:E74_Group }        \n                }\n                LIMIT 3000\n                }\n\n            ## \n                    SERVICE <https://query.wikidata.org/sparql>\n                        {\n                            \n                            ?item ?p ?o.\n                        }\n            }\n\n            GROUP BY ?p\n        }\n\n        SERVICE <https://query.wikidata.org/sparql> {\n            # get the original property (in the the statement construct)     \n            ?prop wikibase:directClaim ?p .\n            BIND (?propLabel AS ?propLabel)\n            SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". }\n        }\n\n \n}\nORDER BY DESC(?n)\nLIMIT 100",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "#### Import countries of the organisations",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Countries of the first 3000 organisations\n\n# \n\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\n\nSELECT ?country ?countryLabel (COUNT(*) as ?n)\nWHERE {\n    {SELECT DISTINCT ?item\n    WHERE {\n            GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n        {?item rdf:type crm:E74_Group }        \n    }\n    LIMIT 3000\n    }\n\n## \n    SERVICE <https://query.wikidata.org/sparql>\n        {\n            \n            ?item wdt:P17 ?country.\n            BIND(?countryLabel as ?countryLabel)\n            SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". }\n\n        }\n}\n\nGROUP BY ?country ?countryLabel\nORDER BY DESC(?n)\nLIMIT 30",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Prepare and inspect the data to be imported\n\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>\n\n\nCONSTRUCT {?item wdt:P17 ?country.\n                  ?country a wd:Q6256;\n            rdfs:label ?countryLabel}\nWHERE\n    {\n        GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n\n        ## Find the organisations in the imported graph\n        {SELECT ?item\n        WHERE \n                {?item a  crm:E74_Group .}\n        ORDER BY ?item      \n        OFFSET 0\n        #OFFSET 10000\n        LIMIT 10\n\n        }\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n            {\n                ?item wdt:P17 ?country.\n                BIND (?countryLabel as ?countryLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n            }\n                \n        }",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Prepare and inspect the data to be imported\n\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>\n\n\nWITH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\nINSERT {?item wdt:P17 ?country.\n        ?country a wd:Q6256;\n            rdfs:label ?countryLabel}\nWHERE\n    {\n        ## Find the organisations in the imported graph\n        {SELECT ?item\n        WHERE \n                {?item a  crm:E74_Group .}\n        ORDER BY ?item      \n        }\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n            {\n                ?item wdt:P17 ?country.\n                BIND (?countryLabel as ?countryLabel)\n                SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". } \n            }\n                \n        }",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Insert the label of the property\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\n\nINSERT DATA {\n  GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n  {wdt:P17 rdfs:label 'has organisation country'.}\n}",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "#### Import _instance of_ of the organisations",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### _instance of_ of the first 3000 organisations\n\n# \n\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\n\nSELECT ?groupType ?groupTypeLabel (COUNT(*) as ?n)\nWHERE {\n    {SELECT DISTINCT ?item\n    WHERE {\n            GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n        {?item rdf:type crm:E74_Group }        \n    }\n    LIMIT 3000\n    }\n\n## \n    SERVICE <https://query.wikidata.org/sparql>\n        {\n            \n            ?item wdt:P31 ?groupType.\n            BIND(?groupTypeLabel as ?groupTypeLabel)\n            SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". }\n\n        }\n}\n\nGROUP BY ?groupType ?groupTypeLabel\nORDER BY DESC(?n)\nLIMIT 30",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Prepare and inspect the data to be imported\n\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>\nPREFIX crm-sup: <https://sdhss.org/ontology/crm-supplement/>\n\n\nCONSTRUCT {\n            ?item wdt:P31 ?groupType.\n            ?groupType a crm-sup:C9;\n                    rdfs:label ?groupTypeLabel\n            }\nWHERE\n    {\n        GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n\n        ## Find the organisations in the imported graph\n        {SELECT ?item\n        WHERE \n                {?item a  crm:E74_Group .}\n        ORDER BY ?item      \n        OFFSET 0\n        #OFFSET 10000\n        LIMIT 10\n\n        }\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n             {\n            \n            ?item wdt:P31 ?groupType.\n            BIND(?groupTypeLabel as ?groupTypeLabel)\n            SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". }\n\n        }\n                \n        }",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Prepare and inspect the data to be imported\n\n\n# Group Type\n# https://sdhss.org/ontology/crm-supplement/C9\n\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>\nPREFIX crm-sup: <https://sdhss.org/ontology/crm-supplement/>\n\n\nWITH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\nINSERT {\n            ?item wdt:P31 ?groupType.\n            ?groupType a crm-sup:C9;\n                rdfs:label ?groupTypeLabel\n            }\nWHERE\n    {\n        \n        ## Find the organisations in the imported graph\n        {SELECT ?item\n        WHERE \n                {?item a  crm:E74_Group .}\n        ORDER BY ?item      \n\n        }\n        ## \n        SERVICE <https://query.wikidata.org/sparql>\n             {\n            \n            ?item wdt:P31 ?groupType.\n            BIND(?groupTypeLabel as ?groupTypeLabel)\n            SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". }\n\n        }\n                \n        }",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Insert the label of the property\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\n\nINSERT DATA {\n  GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n  {wdt:P31 rdfs:label 'instance of'.}\n}",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Insert the label of the Group Type class\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX crm-sup: <https://sdhss.org/ontology/crm-supplement/>\n\n\nINSERT DATA {\n  GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n  {crm-sup:C9 rdfs:label 'Group Type'.}\n}",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "#### Geogr. coordinates",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Locations of the first 30 organisations\n\n# \n\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\n\nSELECT ?item ?coordinates\nWHERE {\n    {SELECT DISTINCT ?item\n    WHERE {\n            GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n        {?item rdf:type crm:E74_Group }        \n    }\n    LIMIT 30\n    }\n\n## \n    SERVICE <https://query.wikidata.org/sparql>\n        {\n            \n            ?item wdt:P625 ?coordinates.\n\n        }\n}\nLIMIT 30",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "### Prepare queries for data analysis in the Python noteboks",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "### Prepare the data\n\n# \n\nPREFIX franzOption_defaultDatasetBehavior: <franz:rdf>\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\n\n\nSELECT ?person (MIN(?pLabel) AS ?personLabel)\n        (MIN(?birthYear) AS ?birthYear)\n        ?relationship \n        ?organisation (MIN(?oLabel) AS ?organisationLabel)\n        (COUNT(*) as ?n) \n        (GROUP_CONCAT(DISTINCT ?groupTypeLabel; separator=\" | \") AS ?groupTypes) \n        #(GROUP_CONCAT(DISTINCT ?countryLabel; separator=\" | \") AS ?countries) \n\nWHERE {\n        GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n        {\n        {?person a wd:Q5;\n           rdfs:label ?pLabel;\n           wdt:P569 ?birthYear.\n        }\n\n\n        {?person wdt:P108 ?organisation.\n        BIND('employment' AS ?relationship)\n        }   \n        UNION\n        {?person wdt:P463 ?organisation.\n        BIND('membership' AS ?relationship)\n        }   \n        UNION\n        {?person wdt:P69 ?organisation.\n        BIND('education' AS ?relationship)\n        }  \n        ?organisation rdfs:label ?oLabel;\n                 wdt:P31 ?groupType.\n        ?groupType rdfs:label ?groupTypeLabel         \n        \n        # OPTIONAL {\n        #    ?organisation wdt:P17 ?country.\n        #    ?country rdfs:label ?countryLabel.\n        # }\n\n         }        \n\n\n\n    }\n\nGROUP BY ?person ?relationship ?organisation   \nORDER by ?person \nLIMIT 30\n    ",
+    "metadata": {}
+  }
+]
