@@ -172,5 +172,11 @@
     "language": "sparql",
     "value": "### Persons without a country of citizenship\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\n\nSELECT (COUNT(*) as ?n)\nWHERE \n{GRAPH <https://github.com/projhistoire/Projet-Histoire/blob/main/Wikidata/graph/imported-data.md>\n        \n    {?item a wd:Q5.\n    MINUS {\n            ?item wdt:P27 ?country   .\n        }     \n    }\n}\n",
     "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "#code de référence pour l'ajout de p69 education au reste des informations\n\nPREFIX wd: <http://www.wikidata.org/entity/>\nPREFIX wdt: <http://www.wikidata.org/prop/direct/>\nPREFIX wikibase: <http://wikiba.se/ontology#>\nPREFIX bd: <http://www.bigdata.com/rdf#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nCONSTRUCT \n{\n    ?item rdfs:label ?itemLabel.\n    ?item wdt:P21 ?gender.\n    ?item wdt:P569 ?year. \n    ?item wdt:P31 wd:Q5.\n    ?item wdt:P69 ?education.\n    ?education rdfs:label ?educationLabel.\n}\nWHERE {\n    SERVICE <https://query.wikidata.org/sparql> {\n        ?item wdt:P31 wd:Q5;  # Instance d'humain\n            wdt:P569 ?birthDate;\n            wdt:P21 ?gender.\n            \n        # Critères de sélection regroupés proprement\n        {\n            ?item wdt:P106 wd:Q11631.  # Astronaute\n        } UNION {\n            ?item wdt:P101 wd:Q22719.  # Astronautics\n        } UNION {\n            ?item wdt:P106 wd:Q765633.  # Aviation\n        }\n        \n        OPTIONAL {\n            ?item wdt:P69 ?education.\n            ?education rdfs:label ?educationLabel.\n            FILTER(LANG(?educationLabel) = \"en\")\n        }\n        \n        BIND(xsd:integer(REPLACE(str(?birthDate), \"(.*)([0-9]{4})(.*)\", \"$2\")) AS ?year)\n        FILTER(?year > 1900 && ?year < 2025)\n        \n        SERVICE wikibase:label { \n            bd:serviceParam wikibase:language \"en\" \n        }\n    }\n}",
+    "metadata": {}
   }
 ]
